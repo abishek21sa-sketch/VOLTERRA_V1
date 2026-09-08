@@ -33,6 +33,21 @@ VOLTERRA now includes a multi-period greenfield charging-network expansion MILP 
 
 # VOLTERRA
 
+## Production deployment
+
+VOLTERRA uses the same split deployment contract as the reference products:
+the Angular control tower builds on Vercel and the Go API runs on Render.
+`vercel.json` defines the frontend build from `frontend/`; `render.yaml` and
+the root `Dockerfile` define the API, Render's `$PORT`, CORS, DuckDB CLI, and
+the persistent `/data` disk.
+
+Before the live map can serve data, upload the generated
+`volterra.duckdb` warehouse and `queue_risk_predictions.json` artifact to the
+Render disk at the paths configured in `render.yaml`. Those data artifacts are
+intentionally not committed to Git. Set `VOLTERRA_CORS_ORIGINS` to the Vercel
+URL after the frontend is created, then verify `/health`, `/api/sites`, and
+`/api/demand` in that order.
+
 **EV Charging Network & Grid Decision Intelligence Platform**
 
 VOLTERRA is a charging-network control tower and infrastructure-planning laboratory built over

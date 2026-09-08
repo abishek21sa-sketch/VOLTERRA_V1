@@ -5,10 +5,11 @@ import { Observable } from 'rxjs';
 import { SiteDemand } from './demand';
 import { ChargingSite } from './site';
 
-// 8090, not docker-compose.yml's 8080 — this dev machine already has another project's backend
-// on 8080 (see backend/README.md). Not yet wired to a build-time env var — see
-// docs/frontend-notes.md item 2 for the follow-up once real deployment config exists.
-const API_BASE_URL = 'http://localhost:8090';
+const runtimeConfig = (globalThis as typeof globalThis & { __VOLTERRA_API_BASE__?: string }).__VOLTERRA_API_BASE__;
+const localHost = typeof location !== 'undefined' &&
+  (location.hostname === 'localhost' || location.hostname === '127.0.0.1');
+export const API_BASE_URL = (runtimeConfig ||
+  (localHost ? 'http://localhost:8090' : 'https://volterra-api.onrender.com')).replace(/\/$/, '');
 
 @Injectable({ providedIn: 'root' })
 export class NetworkApi {

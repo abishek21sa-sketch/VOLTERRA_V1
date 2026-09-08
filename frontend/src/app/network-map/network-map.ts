@@ -4,7 +4,7 @@ import * as maplibregl from 'maplibre-gl';
 import type { Map as MapLibreMap, Marker } from 'maplibre-gl';
 
 import { QueueRiskPrediction, SiteDemand, UTILIZATION_GRID } from '../core/demand';
-import { NetworkApi } from '../core/network-api';
+import { API_BASE_URL, NetworkApi } from '../core/network-api';
 import { ChargingSite } from '../core/site';
 
 // Free vector basemap requiring no API key/token — swap for a hosted style once one exists.
@@ -14,7 +14,7 @@ const US_CENTER: [number, number] = [-98.5, 39.5];
 const US_INITIAL_ZOOM = 3.6;
 
 // Matches NetworkApi's API_BASE_URL — surfaced here only for the connection-error message.
-const API_HINT = 'http://localhost:8090';
+const API_HINT = API_BASE_URL;
 
 const DEFAULT_UTILIZATION_INDEX = 5; // UTILIZATION_GRID[5] === 0.75
 
@@ -189,7 +189,7 @@ export class NetworkMap implements AfterViewInit, OnDestroy {
     if (!message || this.copilotLoading()) return;
     this.copilotLoading.set(true); this.copilotAnswer.set('Computing…');
     try {
-      const response = await fetch(`${API_HINT}/api/copilot`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ tier: 'public', message }) });
+      const response = await fetch(`${API_BASE_URL}/api/copilot`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ tier: 'public', message }) });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error ?? 'Copilot unavailable');
       this.copilotAnswer.set(data.answer ?? 'No visible answer returned.');

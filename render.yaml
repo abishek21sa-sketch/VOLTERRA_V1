@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: volterra-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: VOLTERRA_CORS_ORIGINS
+        sync: false
+      - key: VOLTERRA_MEMGRAPH_URI
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: VOLTERRA_WAREHOUSE_PATH
+        value: /data/volterra.duckdb
+      - key: VOLTERRA_QUEUE_RISK_PREDICTIONS_PATH
+        value: /data/queue_risk_predictions.json
+    disk:
+      name: volterra-data
+      mountPath: /data
+      sizeGB: 10

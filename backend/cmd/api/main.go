@@ -65,11 +65,14 @@ func main() {
 	})
 	// Dev-only default: the Angular dev server (localhost:4200) is cross-origin from the API
 	// (localhost:4200). The origin is configurable and defaults to the local UI only.
-	allowedOrigin := os.Getenv("VOLTERRA_CORS_ORIGIN")
-	if allowedOrigin == "" {
-		allowedOrigin = "http://localhost:4200"
+	allowedOrigins := os.Getenv("VOLTERRA_CORS_ORIGINS")
+	if allowedOrigins == "" {
+		allowedOrigins = os.Getenv("VOLTERRA_CORS_ORIGIN")
 	}
-	app.Use(cors.New(cors.Config{AllowOrigins: allowedOrigin, AllowMethods: "GET,POST,OPTIONS", AllowHeaders: "Origin, Content-Type, Accept, X-Request-ID"}))
+	if allowedOrigins == "" {
+		allowedOrigins = "http://localhost:4200"
+	}
+	app.Use(cors.New(cors.Config{AllowOrigins: allowedOrigins, AllowMethods: "GET,POST,OPTIONS", AllowHeaders: "Origin, Content-Type, Accept, X-Request-ID"}))
 
 	app.Get("/health", func(c *fiber.Ctx) error {
 		return c.JSON(fiber.Map{"status": "ok", "service": "volterra-api"})
