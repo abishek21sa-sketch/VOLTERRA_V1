@@ -1,0 +1,17 @@
+{
+  "name": "Alternative Fueling Station Locator / AFDC",
+  "authority": "U.S. Department of Energy / National Laboratory of the Rockies",
+  "current_data": "Station Locator current snapshot; historical data from 2014 onward",
+  "fields_include": [
+    "fuel_type_code",
+    "station_name",
+    "street_address",
+    "city",
+    "state",
+    "station access/status",
+    "EV connector/port information"
+  ],
+  "network_data_method": "AFDC receives daily API, periodic CSV, and manual station updates depending on network.",
+  "restriction": "Bulk data download uses the AFDC terms/contact form or developer APIs. Keep the source URL and acquisition timestamp. Do not claim Tesla-only stations unless filtered by the actual network/operator field.",
+  "project_target": "VOLTERRA V1"
+}

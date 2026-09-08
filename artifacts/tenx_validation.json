@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "runtime_ms": 106.128,
+  "project": "VOLTERRA",
+  "ml_family": "Graph-regularized spatiotemporal demand learning",
+  "original_algorithm": "GRIDWEAVE-v1",
+  "workspace_count": 33,
+  "human_authority": "INFRASTRUCTURE_INVESTMENT_REVIEW",
+  "autonomous_execution": false,
+  "decision": {
+    "open_sites": [
+      "S-C",
+      "S-A",
+      "S-B"
+    ],
+    "critical_corridors": [
+      1,
+      2
+    ],
+    "n_minus_one_required": true
+  },
+  "counterfactual": {
+    "naive_policy": "open cheapest candidate first",
+    "choice": "S-D",
+    "disagrees": true
+  }
+}

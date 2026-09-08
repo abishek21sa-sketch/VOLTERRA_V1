@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "project": "VOLTERRA",
+  "model_family": "Graph-regularized spatiotemporal demand learning",
+  "registry_state": "FORECAST_SHADOW",
+  "agent": "Network Investment Planner",
+  "decision_state": "FORECAST_HOLD",
+  "runtime_ms": 93.958,
+  "checks": {
+    "unique_model_family": true,
+    "validation_metric": true,
+    "monitoring_depth": true,
+    "retraining_policy": true,
+    "registry_state": true,
+    "agent_branches_on_model_state": true,
+    "prediction_used": true,
+    "decision_used": true,
+    "counterfactual_challenge": true,
+    "operator_aid": true,
+    "human_authority": true,
+    "original_algorithm_preserved": true,
+    "ml_endpoint": true,
+    "agent_endpoint": true
+  }
+}

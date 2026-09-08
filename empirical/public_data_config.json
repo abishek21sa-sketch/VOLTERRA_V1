@@ -1,0 +1,29 @@
+{
+  "ptype": "volterra",
+  "title": "VOLTERRA V1",
+  "dataset": "DOE/NLR Alternative Fueling Station Locator / AFDC",
+  "uci_id": null,
+  "raw_dir": "afdc",
+  "primary_files": [
+    "afdc_il_ev_stations.json"
+  ],
+  "static": [
+    [
+      "source_manifests/afdc_charging.json",
+      "data/provenance/afdc_charging_manifest.json"
+    ],
+    [
+      "company_public/tesla_2025_operations.csv",
+      "data/snapshots/tesla_2025_operations.csv"
+    ]
+  ],
+  "algorithm": "GRIDWEAVE-v1",
+  "case": "Illinois Charging Coverage and N-1 Expansion Study",
+  "authority": "INFRASTRUCTURE_INVESTMENT_REVIEW",
+  "claim": "AFDC station records are public infrastructure observations. Tesla company metrics are context; no internal charging-network data is claimed.",
+  "static_files": [
+    "data/provenance/afdc_charging_manifest.json",
+    "data/snapshots/tesla_2025_operations.csv"
+  ],
+  "model_version": "public-data-backbone-1.0"
+}

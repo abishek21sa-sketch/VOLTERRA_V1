@@ -1,0 +1,24 @@
+name = "VolterraOptimization"
+uuid = "7943a2c2-1075-4691-b317-7dcd2fab558b"
+version = "0.0.1"
+authors = ["Abishek"]
+
+[deps]
+DBInterface = "a10d1c49-ce27-4219-8d33-6db1a4562965"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+DuckDB = "d2f5444f-75bc-4fdf-ac35-56f514c445e1"
+Graphs = "86223c79-3864-5bf0-83f7-82e725a168b6"
+HiGHS = "87dc4568-4c63-4d18-b0c0-bb2238e4078b"
+JuMP = "4076af6c-e467-56ae-b986-b466b2749572"
+MathOptInterface = "b8f27783-ece8-5eb3-8dc8-9495eed66fee"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+VolterraSimulation = "d2d5a61d-3dbb-471b-ae11-a85248e2ab4b"
+
+[compat]
+DBInterface = "2.7.0"
+DuckDB = "1.5.2"
+Random = "1.11.0"
+Test = "1.11.0"
+julia = "1.10"

@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "standard": "Portfolio Engineering Governance Pack + Signature Algorithms v1.0",
+  "project": "VOLTERRA V1",
+  "signature_algorithm": "GRIDWEAVE-v1",
+  "implementation_alias": "network topology and N-1 repair",
+  "implementation": "tenx/signature_algorithm.py",
+  "acceptance_test": "tests/test_signature_algorithm.py",
+  "checks": {
+    "signature_contract": true,
+    "research_validation_protocol": true,
+    "explicit_objective_variables_constraints": true,
+    "baseline_and_counterfactual": true,
+    "ablation_and_sensitivity": true,
+    "evidence_class_separation": true,
+    "human_authority_gate": true,
+    "signature_tests": true
+  },
+  "solver_status": "deterministic_reference_contract",
+  "feasible": true,
+  "seed": 17,
+  "scenario": "reference_signature_contract",
+  "baseline": "cheapest-site-first topology without N-1 criticality enforcement",
+  "null_hypothesis": "H0: GRIDWEAVE produces no different topology than the cheapest-site-first baseline.",
+  "ablation": "remove the critical-node N-1 constraint",
+  "sensitivity": "vary demand by a multiplier and report coverage, criticality, and topology changes",
+  "evidence_classes": [
+    "observed",
+    "simulated",
+    "optimized",
+    "shadow_mode",
+    "realized"
+  ],
+  "coverage": {
+    "passed": true,
+    "tests": 6,
+    "executed_statement_lines": 22,
+    "statement_lines": 23,
+    "line_coverage": 0.9565,
+    "coverage_status": "PASS"
+  },
+  "clean_extraction": {
+    "status": "PASS",
+    "tracked_files": 6,
+    "extracted_files": 6,
+    "package": "C:\\Users\\babbi\\Documents\\Codex\\2026-09-06\\als\\work\\governance_packages\\VOLTERRA_V1.zip"
+  }
+}

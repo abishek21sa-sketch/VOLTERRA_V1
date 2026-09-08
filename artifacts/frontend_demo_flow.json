@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "project": "VOLTERRA V1",
+  "visual_identity": "map-first infrastructure planning studio",
+  "native_entrypoint": "frontend/src/app/network-map/network-map.html",
+  "shared_behavioral_contract": [
+    "input",
+    "evidence",
+    "decision",
+    "counterfactual",
+    "human approval"
+  ],
+  "project_specific_flow": [
+    "inspect real network sites",
+    "overlay modeled demand risk",
+    "select resilient topology",
+    "stress N-1 and demand scenarios",
+    "investment review approves or holds"
+  ],
+  "not_shared": [
+    "theme",
+    "layout",
+    "domain vocabulary",
+    "visualization type"
+  ],
+  "signature_endpoint": "/api/governance/signature"
+}

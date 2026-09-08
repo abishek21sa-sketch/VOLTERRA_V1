@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "seeds": [
+    3,
+    7,
+    11,
+    19,
+    29
+  ],
+  "decision_path_passes": 5,
+  "naive_decision_changes": 5,
+  "rows": [
+    {
+      "seed": 3,
+      "pass": true,
+      "changes_naive_decision": true,
+      "decision": {
+        "open_sites": [
+          "S-C",
+          "S-A",
+          "S-B"
+        ],
+        "critical_corridors": [
+          1,
+          2
+        ],
+        "n_minus_one_required": true
+      }
+    },
+    {
+      "seed": 7,
+      "pass": true,
+      "changes_naive_decision": true,
+      "decision": {
+        "open_sites": [
+          "S-C",
+          "S-A",
+          "S-B"
+        ],
+        "critical_corridors": [
+          1,
+          2
+        ],
+        "n_minus_one_required": true
+      }
+    },
+    {
+      "seed": 11,
+      "pass": true,
+      "changes_naive_decision": true,
+      "decision": {
+        "open_sites": [
+          "S-C",
+          "S-A",
+          "S-B"
+        ],
+        "critical_corridors": [
+          1,
+          2
+        ],
+        "n_minus_one_required": true
+      }
+    },
+    {
+      "seed": 19,
+      "pass": true,
+      "changes_naive_decision": true,
+      "decision": {
+        "open_sites": [
+          "S-C",
+          "S-A",
+          "S-B"
+        ],
+        "critical_corridors": [
+          1,
+          2
+        ],
+        "n_minus_one_required": true
+      }
+    },
+    {
+      "seed": 29,
+      "pass": true,
+      "changes_naive_decision": true,
+      "decision": {
+        "open_sites": [
+          "S-C",
+          "S-A",
+          "S-B"
+        ],
+        "critical_corridors": [
+          1,
+          2
+        ],
+        "n_minus_one_required": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "project": "VOLTERRA V1",
+  "ui_identity": "map-first infrastructure planning studio",
+  "ui_namespace": "geo-",
+  "workspaces": 33,
+  "checks": {
+    "signature_marker": true,
+    "namespace_depth": true,
+    "workspace_depth": true,
+    "workspace_count_matches": true,
+    "ml_lifecycle_visible": true,
+    "agent_planning_visible": true,
+    "empirical_provenance_visible": true
+  }
+}

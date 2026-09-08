@@ -1,0 +1,51 @@
+# Data (large, regenerable from ingestion — never commit)
+data/raw/**
+data/snapshots/**
+!data/raw/.gitkeep
+!data/snapshots/.gitkeep
+warehouse/*.duckdb
+warehouse/*.duckdb.wal
+
+# ml/ generated training data and trained model artifacts — regenerable via
+# simulation/examples/generate_queue_risk_dataset.jl + ml/examples/train_queue_risk_model.py
+ml/data/**
+!ml/data/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+
+# Julia
+optimization/Manifest.toml
+simulation/Manifest.toml
+graph/Manifest.toml
+routing/Manifest.toml
+*.jl.cov
+*.jl.mem
+
+# Node / Angular
+frontend/node_modules/
+frontend/.angular/
+frontend/dist/
+npm-debug.log*
+
+# Go
+backend/bin/
+backend/*.exe
+
+# Env / secrets
+.env
+.env.local
+*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,48 @@
+{
+  "autonomous_execution": false,
+  "case_study": {
+    "decision_impact": "GRIDWEAVE remains on reference geography until an AFDC station snapshot is acquired. Tesla operations metrics are context only.",
+    "name": "Illinois Charging Coverage and N-1 Expansion Study",
+    "status": "ACQUISITION_REQUIRED"
+  },
+  "claim_boundary": "AFDC station records are public infrastructure observations. Tesla company metrics are context; no internal charging-network data is claimed.",
+  "current_model_version": "public-data-backbone-1.0",
+  "dataset": "DOE/NLR Alternative Fueling Station Locator / AFDC",
+  "dataset_state": "EXTERNAL_ACQUISITION_REQUIRED",
+  "generated_at_utc": "2026-09-06T17:04:49.329906+00:00",
+  "human_authority": "INFRASTRUCTURE_INVESTMENT_REVIEW",
+  "layers": {
+    "contracts": "data/contracts",
+    "dictionaries": "data/dictionaries",
+    "processed": "data/processed",
+    "provenance": "data/provenance",
+    "raw": "data/raw",
+    "snapshots": "data/snapshots"
+  },
+  "primary_files": [
+    {
+      "exists": false,
+      "path": "data/raw/afdc/afdc_il_ev_stations.json"
+    }
+  ],
+  "project": "VOLTERRA V1",
+  "schema_validation": "ACQUISITION_REQUIRED",
+  "static_context_files": [
+    {
+      "bytes": 784,
+      "features": 7,
+      "missing_fraction": null,
+      "path": "data/provenance/afdc_charging_manifest.json",
+      "rows": 1,
+      "sha256": "a35f7849d2a715fbdc433ae3f9c2526946aa9432821ce2e51f823b1d9d46930a"
+    },
+    {
+      "bytes": 322,
+      "features": 6,
+      "missing_fraction": 0.0,
+      "path": "data/snapshots/tesla_2025_operations.csv",
+      "rows": 3,
+      "sha256": "864850490c53763954f05073b880091badf6bc9cbaf23e254d95a6ea8f17ee9c"
+    }
+  ]
+}

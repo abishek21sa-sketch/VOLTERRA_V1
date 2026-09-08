@@ -1,0 +1,79 @@
+networks:
+  volterra:
+    driver: bridge
+
+services:
+  memgraph:
+    image: memgraph/memgraph-platform:latest
+    ports:
+      - "7687:7687"   # Bolt protocol (Cypher)
+      - "3001:3000"   # Memgraph Lab UI -- host 3000 is already taken by a sibling project's
+                       # container on this dev machine (apex_v1-frontend-1), confirmed via
+                       # `docker ps`; the in-container port stays 3000, only the host mapping moves
+    volumes:
+      - memgraph-data:/var/lib/memgraph
+    networks:
+      - volterra
+
+  redpanda:
+    image: redpandadata/redpanda:latest
+    command:
+      - redpanda
+      - start
+      - --smp=1
+      - --memory=512M
+      - --overprovisioned
+      - --node-id=0
+      - --check=false
+      - --kafka-addr=PLAINTEXT://0.0.0.0:9092
+      - --advertise-kafka-addr=PLAINTEXT://redpanda:9092
+    ports:
+      - "9092:9092"
+    volumes:
+      - redpanda-data:/var/lib/redpanda/data
+    networks:
+      - volterra
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8080:8080"
+    environment:
+      - VOLTERRA_WAREHOUSE_PATH=/data/warehouse/volterra.duckdb
+      - VOLTERRA_MEMGRAPH_URI=bolt://memgraph:7687
+      - VOLTERRA_REDPANDA_BROKERS=redpanda:9092
+    volumes:
+      - ./warehouse:/data/warehouse
+    depends_on:
+      - memgraph
+      - redpanda
+    networks:
+      - volterra
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "4200:4200"
+    environment:
+      - NG_APP_API_BASE_URL=http://localhost:8080
+    depends_on:
+      - backend
+    networks:
+      - volterra
+
+volumes:
+  memgraph-data:
+  redpanda-data:
+
+# NOTE: backend/ has no Dockerfile yet and frontend/'s Dockerfile is the Angular CLI default, so
+# the `backend`/`frontend` services here can't actually build yet -- `docker compose up -d
+# memgraph` (just memgraph, by name) is the real, working part of this file today. VOLTERRA_MEMGRAPH_URI
+# is genuinely consumed by backend/cmd/api and backend/cmd/loadgraph (see backend/README.md's
+# "Graph database" section) once backend/ runs outside Docker, on the host, against this
+# container's exposed Bolt port. VOLTERRA_REDPANDA_BROKERS remains aspirational -- no Go code
+# reads it yet; async job orchestration over Redpanda is a real future upgrade, not yet wired.
+# The warehouse is a DuckDB *file*, not a service — ingestion/warehouse build scripts write it
+# locally to ./warehouse/volterra.duckdb, which this compose file mounts read-only-in-spirit
+# into the backend container. Bring the backend/frontend services up once they actually build.

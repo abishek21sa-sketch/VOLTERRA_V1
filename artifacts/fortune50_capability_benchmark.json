@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "standard": "Fortune-50 capability evidence pack v1",
+  "project": "VOLTERRA_V1",
+  "signature_algorithm": "GRIDWEAVE-v1",
+  "seed": 17,
+  "scenario": "fixed_reference_decision_case",
+  "baseline_comparison": {
+    "critical_redundancy_added": 0,
+    "signature_sites": [
+      "B",
+      "A"
+    ]
+  },
+  "decisions": {
+    "signature": [
+      "B",
+      "A"
+    ],
+    "baseline": [
+      "B",
+      "A"
+    ],
+    "ablation": [
+      "B",
+      "A"
+    ],
+    "sensitivity": [
+      "B",
+      "A"
+    ]
+  },
+  "runtime": {
+    "reference_ms": 0.044,
+    "p25_ms": 0.023,
+    "p50_ms": 0.026,
+    "p95_ms": 0.03,
+    "repeated_runs": 25
+  },
+  "reproducibility": {
+    "same_fixture_repeated": true,
+    "deterministic_seed": 17
+  },
+  "ablation": {
+    "executed": true,
+    "meaning": "declared risk/safety/balance/criticality constraint removal"
+  },
+  "sensitivity": {
+    "executed": true,
+    "meaning": "declared budget/capacity/envelope/alpha/demand perturbation"
+  },
+  "evidence_boundary": [
+    "observed",
+    "simulated",
+    "optimized",
+    "shadow_mode",
+    "realized"
+  ],
+  "enterprise_hardening": {
+    "health_route_declared": true,
+    "request_id_or_trace_header": true,
+    "human_gate_or_machine_write_block": true,
+    "frontend_native_surface": true,
+    "signature_module_present": true,
+    "manifest_present": true,
+    "source_hash_ledger_present": true
+  },
+  "implementation_paths": {
+    "signature_module": "tenx/signature_algorithm.py",
+    "native_api_or_service": [
+      "backend/cmd/api/main.go",
+      "frontend/src/app/network-map/network-map.ts"
+    ],
+    "native_ui": [
+      "frontend/src/app/network-map/network-map.ts",
+      "tenx_ui/index.html"
+    ]
+  }
+}

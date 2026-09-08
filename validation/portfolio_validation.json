@@ -1,0 +1,98 @@
+{
+  "checks": {
+    "all_critical_site_outage_assignments_present": true,
+    "n_minus_one_optimal": true,
+    "nominal_optimal": true
+  },
+  "evidence_boundary": "Reference planning inputs are synthetic. N-1 is a model-based planning contingency, not utility/grid certification; real-site and native Julia/JuMP gates remain separately governed.",
+  "evidence_sha256": "3e2fc16f728e7e1838b1eeca20d2fb20d603990bb2afb81d24dd392ea26f2c17",
+  "human_investment_approval_required": true,
+  "n_minus_one_critical_network_expansion": {
+    "assignments": {
+      "FREIGHT@P1": "GRID_C",
+      "FREIGHT@P2": "GRID_C",
+      "FREIGHT@P3": "CORRIDOR_B",
+      "I-CORE@P1": "URBAN_A",
+      "I-CORE@P2": "URBAN_A",
+      "I-CORE@P3": "URBAN_A",
+      "SUBURB@P1": "GRID_C",
+      "SUBURB@P2": "GRID_C",
+      "SUBURB@P3": "GRID_C"
+    },
+    "contingency_assignments": {
+      "FREIGHT@OUTAGE:CORRIDOR_B": "GRID_C",
+      "FREIGHT@OUTAGE:GRID_C": "CORRIDOR_B",
+      "FREIGHT@OUTAGE:URBAN_A": "GRID_C",
+      "I-CORE@OUTAGE:CORRIDOR_B": "URBAN_A",
+      "I-CORE@OUTAGE:GRID_C": "URBAN_A",
+      "I-CORE@OUTAGE:URBAN_A": "CORRIDOR_B"
+    },
+    "n_minus_one_critical": true,
+    "objective": 826691.3580246913,
+    "opened_period": {
+      "CORRIDOR_B": 3,
+      "GRID_C": 1,
+      "URBAN_A": 1
+    },
+    "stalls_by_period": {
+      "CORRIDOR_B": [
+        0,
+        0,
+        3
+      ],
+      "GRID_C": [
+        1,
+        2,
+        2
+      ],
+      "URBAN_A": [
+        1,
+        2,
+        3
+      ]
+    },
+    "status": "OPTIMAL"
+  },
+  "native_julia_gate": "PENDING_WINDOWS_JULIA_ACCEPTANCE",
+  "nominal_network_expansion": {
+    "assignments": {
+      "FREIGHT@P1": "CORRIDOR_B",
+      "FREIGHT@P2": "CORRIDOR_B",
+      "FREIGHT@P3": "CORRIDOR_B",
+      "I-CORE@P1": "CORRIDOR_B",
+      "I-CORE@P2": "CORRIDOR_B",
+      "I-CORE@P3": "CORRIDOR_B"
+    },
+    "contingency_assignments": {},
+    "n_minus_one_critical": false,
+    "objective": 536203.0178326474,
+    "opened_period": {
+      "CORRIDOR_B": 1
+    },
+    "stalls_by_period": {
+      "CORRIDOR_B": [
+        2,
+        3,
+        4
+      ],
+      "GRID_C": [
+        0,
+        0,
+        0
+      ],
+      "URBAN_A": [
+        0,
+        0,
+        0
+      ]
+    },
+    "status": "OPTIMAL"
+  },
+  "production_write_allowed": false,
+  "release": "VOLTERRA_PORTFOLIO_RC1",
+  "resilience_economics": {
+    "interpretation": "Incremental reference objective required to preserve final-horizon critical-corridor service capacity after any single candidate-site outage.",
+    "objective_premium_usd_reference": 290488.3401920439
+  },
+  "status": "PASS"
+}

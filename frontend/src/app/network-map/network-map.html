@@ -1,0 +1,125 @@
+<div class="map-shell">
+  <div #mapContainer class="map-container"></div>
+
+  <div class="hud">
+    <div class="hud-brand">VOLTERRA</div>
+    @if (siteCount() !== null) {
+      <div class="hud-count">{{ siteCount() }} sites plotted</div>
+    }
+  </div>
+
+  <div class="layer-panel">
+    <button
+      class="layer-toggle"
+      [class.is-on]="demandLayerEnabled()"
+      (click)="toggleDemandLayer()"
+    >
+      <span class="layer-toggle-dot"></span>
+      <span>DEMAND {{ demandLayerEnabled() ? 'ON' : 'OFF' }}</span>
+      <span>{{ demandLoading() ? '…' : '' }}</span>
+    </button>
+
+    @if (demandLayerEnabled()) {
+      <div class="layer-controls">
+        <div class="layer-controls-label">
+          <span>Utilization scenario</span>
+          <span>{{ (utilizationGrid[utilizationIndex()] * 100) | number: '1.0-0' }}%</span>
+        </div>
+        <input
+          type="range"
+          min="0"
+          [max]="utilizationGrid.length - 1"
+          step="1"
+          [value]="utilizationIndex()"
+          (input)="onUtilizationIndexChange($any($event.target).valueAsNumber)"
+        />
+      </div>
+
+      <div class="legend">
+        <div class="legend-label">P(wait &gt; 15 min)</div>
+        <div class="legend-gradient"></div>
+        <div class="legend-scale">
+          <span>0%</span>
+          <span>30%+</span>
+        </div>
+      </div>
+
+      <p class="layer-caveat">
+        MODELED — a fast LightGBM approximation of simulation/'s M/G/c queueing model, not
+        observed demand. "Utilization" is a scenario you choose, not a live measurement.
+      </p>
+    }
+  </div>
+
+  <div class="evidence-panel" aria-label="Model and data provenance">
+    <div class="evidence-panel-title">EVIDENCE / MODEL BOUNDARY</div>
+    <div class="evidence-panel-row"><span>Network geometry</span><b>Public station snapshot</b></div>
+    <div class="evidence-panel-row"><span>Queue-risk layer</span><b>Modeled surrogate</b></div>
+    <div class="evidence-panel-row"><span>Weather input</span><b>NOAA forecast when available</b></div>
+    <p>Predictions support scenario screening only. They are not observed demand and do not authorize capital or operating changes.</p>
+  </div>
+
+  <button class="copilot-launch" (click)="copilotOpen.set(!copilotOpen())">{{ copilotOpen() ? 'CLOSE COPILOT' : 'AI COPILOT' }}</button>
+  @if (copilotOpen()) {
+    <aside class="copilot-panel" aria-label="VOLTERRA network copilot">
+      <div class="copilot-title">VOLTERRA NETWORK COPILOT</div>
+      <div class="copilot-subtitle">Gemini optional · deterministic fallback · review-only</div>
+      <textarea rows="3" [value]="copilotMessage()" (input)="copilotMessage.set($any($event.target).value)" placeholder="Which evidence should I inspect before a network decision?"></textarea>
+      <button (click)="askCopilot()" [disabled]="copilotLoading()">{{ copilotLoading() ? 'ASKING…' : 'ASK COPILOT' }}</button>
+      <pre>{{ copilotAnswer() }}</pre><small>{{ copilotProvider() }}</small>
+    </aside>
+  }
+
+  @if (loadError()) {
+    <div class="error-banner">{{ loadError() }}</div>
+  }
+
+  @if (demandError()) {
+    <div class="demand-error">
+      <span>{{ demandError() }}</span>
+      <button (click)="closeDemandError()" aria-label="Dismiss">&times;</button>
+    </div>
+  }
+
+  @if (selectedSite(); as site) {
+    <aside class="dossier">
+      <button class="dossier-close" (click)="closeDossier()" aria-label="Close">&times;</button>
+      <h2>{{ site.name }}</h2>
+      <p class="dossier-location">{{ site.city }}, {{ site.state }}</p>
+      <dl>
+        <dt>Stalls</dt>
+        <dd>{{ site.stall_count }}</dd>
+        <dt>Max power</dt>
+        <dd>{{ site.max_power_kw }} kW</dd>
+        <dt>Operator</dt>
+        <dd>{{ site.operator_id }}</dd>
+        <dt>Access</dt>
+        <dd>{{ site.access_restricted ? 'Restricted' : 'Public' }}</dd>
+      </dl>
+
+      @if (demandLayerEnabled() && selectedSiteDemand(); as demand) {
+        <div class="dossier-demand">
+          <div class="dossier-demand-label">
+            Queue-risk estimate @ {{ (utilizationGrid[utilizationIndex()] * 100) | number: '1.0-0' }}% utilization
+          </div>
+          <dl>
+            <dt>Mean wait</dt>
+            <dd>{{ demand.mean_wait_min | number: '1.1-1' }} min</dd>
+            <dt>P(wait &gt; 0)</dt>
+            <dd>{{ (demand.p_wait * 100) | number: '1.0-1' }}%</dd>
+            <dt>P(wait &gt; 15 min)</dt>
+            <dd>{{ (demand.p_wait_over_15min * 100) | number: '1.0-1' }}%</dd>
+          </dl>
+          <p class="dossier-demand-note">
+            MODELED (surrogate of simulation/'s queueing model).
+            @if (selectedSiteTempSource() === 'noaa_nws') {
+              Real current NOAA forecast temperature.
+            } @else {
+              No real forecast for this site — assumed 20°C.
+            }
+          </p>
+        </div>
+      }
+    </aside>
+  }
+</div>

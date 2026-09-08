@@ -1,0 +1,22 @@
+[project]
+name = "volterra-ingestion"
+version = "0.0.1"
+description = "Versioned collectors for VOLTERRA's data sources (Tesla primary, NREL/FHWA/Census/EIA/NOAA/EPA supplemental)."
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27",
+    "selenium>=4.20",
+    "beautifulsoup4>=4.12",
+    "pydantic>=2.7",
+    "tenacity>=8.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[tool.setuptools]
+packages = ["tesla", "supplemental"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

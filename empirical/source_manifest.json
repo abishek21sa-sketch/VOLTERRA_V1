@@ -1,0 +1,16 @@
+{
+  "project": "VOLTERRA EV Charging & Grid Infrastructure Intelligence",
+  "source_provider": "National Laboratory of the Rockies / AFDC",
+  "source_name": "Alternative Fuel Stations API",
+  "source_url": "https://developer.nlr.gov/docs/transportation/alt-fuel-stations-v1/",
+  "download_url": "https://developer.nlr.gov/api/alt-fuel-stations/v1.json?fuel_type=ELEC&state=IL&limit=200&api_key=DEMO_KEY",
+  "doi": "AFDC public station database",
+  "license": "US government/public API; review provider terms",
+  "advertised": "live EV charging-station locations, networks, ports and infrastructure attributes",
+  "entity": "station / corridor / grid node / candidate site",
+  "historical": "station-network growth, corridor demand and grid-capacity evolution",
+  "case": "Illinois corridor charging-capacity and N-1 resilience study",
+  "refresh_required_for_real_data": true,
+  "offline_validation_mode": "repository reference evidence + source contract",
+  "provenance_rule": "Never label reference/synthetic fixtures as external observations."
+}

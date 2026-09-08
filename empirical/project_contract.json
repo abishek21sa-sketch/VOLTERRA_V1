@@ -1,0 +1,12 @@
+{
+  "local_evidence": "ml/data/real_sites_holdout.csv",
+  "entity_grain": "station / corridor / demand interval",
+  "historical_intelligence": "site demand, queue-risk and infrastructure-capacity chronology",
+  "decision": "site/capacity investment and contingency action",
+  "actor": "Charging Network Planner",
+  "case_questions": [
+    "Which station / corridor / demand interval shows the strongest empirical shift or evidence concentration?",
+    "Does the predictive + authored-algorithm + OR decision differ from the simple baseline for site/capacity investment and contingency action?",
+    "What evidence would cause the Charging Network Planner to HOLD rather than approve?"
+  ]
+}

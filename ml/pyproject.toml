@@ -1,0 +1,25 @@
+[project]
+name = "volterra-ml"
+version = "0.0.1"
+description = "Demand forecasting, queue-risk forecasting, anomaly detection, and the RL charging-guidance agent for VOLTERRA."
+requires-python = ">=3.11"
+dependencies = [
+    "torch>=2.3",
+    "lightgbm>=4.3",
+    "polars>=1.0",
+    "scikit-learn>=1.5",
+    "duckdb>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+# Explicit, not automatic flat-layout discovery: ../data/ (generated CSVs from
+# generate_queue_risk_dataset.jl, trained model files) lives alongside volterra_ml/ and is not a
+# Python package -- without this, setuptools errors on "multiple top-level packages discovered".
+include = ["volterra_ml*"]

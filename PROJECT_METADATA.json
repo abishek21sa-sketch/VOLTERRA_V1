@@ -1,0 +1,41 @@
+{
+  "project": "VOLTERRA V1",
+  "release_identity": "VOLTERRA_V1",
+  "release_stage": "PORTFOLIO_FINAL_CANDIDATE",
+  "local_target": "Windows / PowerShell",
+  "workspaces": 33,
+  "original_algorithm": "GRIDWEAVE-v1",
+  "predictive_ml_family": "Graph-regularized spatiotemporal demand learning",
+  "prediction_target": "next-period charging demand by corridor",
+  "decision_campaign": "Resilient Network Capital Campaign",
+  "campaign_identity": "N-1 coverage margin + CAPEX/service frontier",
+  "campaign_scenarios": 7,
+  "campaign_state": "CAPITAL_PLAN_REVIEW",
+  "data_mode": "external_acquisition_ready",
+  "empirical_promotion": "REFERENCE_ONLY_UNTIL_REFRESH",
+  "human_authority": "INFRASTRUCTURE_INVESTMENT_REVIEW",
+  "autonomous_execution": false,
+  "clean_entrypoints": {
+    "acceptance": "scripts/windows_acceptance.ps1",
+    "workstation": "scripts/start_workstation.ps1"
+  },
+  "product_ui_identity": "map-first infrastructure planning studio",
+  "ai_agent": "Network Investment Planner",
+  "agent_decision_policy": "forecast-gated resilient capital planning",
+  "ml_lifecycle_endpoint": "/api/ml/lifecycle",
+  "agent_endpoint": "/api/agent/run",
+  "frontend_similarity_target": "<20% pairwise structural similarity",
+  "max_pairwise_frontend_similarity": 0.1321,
+  "frontend_diversity_status": "PASS",
+  "data_backbone": "data/raw -> processed -> contracts/dictionaries/provenance -> ML -> original algorithm -> OR/simulation -> AI -> human gate",
+  "public_data_case": "Illinois Charging Coverage and N-1 Expansion Study",
+  "claim_ledger": "data/provenance/CLAIM_LEDGER.md",
+  "public_data_model_version": "public-data-backbone-1.0",
+  "fortune50_capability_evidence": {
+    "status": "REFERENCE_READY",
+    "benchmark_artifact": "artifacts/fortune50_capability_benchmark.json",
+    "signature_endpoint": "/api/governance/signature",
+    "frontend_flow_document": "docs/FRONTEND_DEMO_FLOW.md",
+    "autonomous_execution": false
+  }
+}

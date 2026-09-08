@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "method": "5-token Jaccard after removing embedded workspace contract payload",
+  "threshold": 0.2,
+  "max_pairwise_similarity": 0.1321,
+  "pairs": [
+    {
+      "a": "Manufacturing_Quality_Intelligence",
+      "b": "REHAB_AI",
+      "similarity": 0.1321
+    },
+    {
+      "a": "KAIZEN_AI",
+      "b": "Manufacturing_Quality_Intelligence",
+      "similarity": 0.1264
+    },
+    {
+      "a": "Manufacturing_Quality_Intelligence",
+      "b": "APEX_V1",
+      "similarity": 0.1216
+    },
+    {
+      "a": "Manufacturing_Quality_Intelligence",
+      "b": "TRUST_DOE_Process_Parameter_Optimization",
+      "similarity": 0.1169
+    },
+    {
+      "a": "Manufacturing_Quality_Intelligence",
+      "b": "VOLTERRA_V1",
+      "similarity": 0.1145
+    },
+    {
+      "a": "APEX_V1",
+      "b": "REHAB_AI",
+      "similarity": 0.1141
+    },
+    {
+      "a": "APEX_V1",
+      "b": "TRUST_DOE_Process_Parameter_Optimization",
+      "similarity": 0.1135
+    },
+    {
+      "a": "KAIZEN_AI",
+      "b": "REHAB_AI",
+      "similarity": 0.1133
+    },
+    {
+      "a": "REHAB_AI",
+      "b": "VOLTERRA_V1",
+      "similarity": 0.1126
+    },
+    {
+      "a": "REHAB_AI",
+      "b": "TRUST_DOE_Process_Parameter_Optimization",
+      "similarity": 0.1113
+    },
+    {
+      "a": "KAIZEN_AI",
+      "b": "APEX_V1",
+      "similarity": 0.1085
+    },
+    {
+      "a": "APEX_V1",
+      "b": "VOLTERRA_V1",
+      "similarity": 0.1082
+    },
+    {
+      "a": "KAIZEN_AI",
+      "b": "TRUST_DOE_Process_Parameter_Optimization",
+      "similarity": 0.1063
+    },
+    {
+      "a": "APEX_V1",
+      "b": "Semiconductor_Fab_Operations_Intelligence",
+      "similarity": 0.1014
+    },
+    {
+      "a": "TRUST_DOE_Process_Parameter_Optimization",
+      "b": "VOLTERRA_V1",
+      "similarity": 0.1013
+    },
+    {
+      "a": "KAIZEN_AI",
+      "b": "Semiconductor_Fab_Operations_Intelligence",
+      "similarity": 0.0987
+    },
+    {
+      "a": "KAIZEN_AI",
+      "b": "VOLTERRA_V1",
+      "similarity": 0.0954
+    },
+    {
+      "a": "Manufacturing_Quality_Intelligence",
+      "b": "Semiconductor_Fab_Operations_Intelligence",
+      "similarity": 0.0949
+    },
+    {
+      "a": "TRUST_DOE_Process_Parameter_Optimization",
+      "b": "Semiconductor_Fab_Operations_Intelligence",
+      "similarity": 0.0926
+    },
+    {
+      "a": "REHAB_AI",
+      "b": "Semiconductor_Fab_Operations_Intelligence",
+      "similarity": 0.09
+    },
+    {
+      "a": "Semiconductor_Fab_Operations_Intelligence",
+      "b": "VOLTERRA_V1",
+      "similarity": 0.0889
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "project": "VOLTERRA V1",
+  "workspaces": 33,
+  "campaign": "Resilient Network Capital Campaign",
+  "checks": {
+    "workspace_depth": true,
+    "workspace_method_uniqueness": true,
+    "workspace_action_uniqueness": true,
+    "campaign_scenarios": true,
+    "campaign_ai_synthesis": true,
+    "campaign_actions": true,
+    "human_authority": true,
+    "campaign_endpoint": true,
+    "empirical_preserved": true,
+    "predictive_decision_preserved": true,
+    "ml_lifecycle": true,
+    "agent_planning": true
+  },
+  "campaign_state": "CAPITAL_PLAN_REVIEW",
+  "data_mode": "offline_reference",
+  "ml_registry": "FORECAST_SHADOW",
+  "agent": "Network Investment Planner"
+}

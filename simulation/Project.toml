@@ -1,0 +1,20 @@
+name = "VolterraSimulation"
+uuid = "d2d5a61d-3dbb-471b-ae11-a85248e2ab4b"
+version = "0.0.1"
+authors = ["Abishek"]
+
+[deps]
+ConcurrentSim = "6ed1e86c-fcaf-46a9-97e0-2b26a2cdb499"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+ResumableFunctions = "c5292f4c-5179-55e1-98c5-05642aab7184"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+Printf = "1.11.0"
+Random = "1.11.0"
+ResumableFunctions = "1.0.7"
+Test = "1.11.0"
+julia = "1.10"

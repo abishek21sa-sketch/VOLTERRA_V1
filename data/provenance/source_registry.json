@@ -1,0 +1,13 @@
+[
+  {
+    "project": "VOLTERRA V1",
+    "company_context": "Tesla charging + U.S. DOE/NLR AFDC",
+    "primary_dataset": "Alternative Fueling Station Locator / AFDC",
+    "dataset_id": null,
+    "instances": "current nationwide stations",
+    "features": "station/network/location/connector/access/status fields",
+    "license": "DOE/NLR data-download terms",
+    "company_public_file": "company_public/tesla_2025_operations.csv",
+    "intended_use": "Real charging network locations, Tesla-network filtering where present, corridor coverage, N-1 resilience, queue/site-demand planning."
+  }
+]

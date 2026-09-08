@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "checks": {
+    "source_manifest": true,
+    "analyzable_evidence": true,
+    "domain_diagnostics": true,
+    "case_study_dossier": true,
+    "historical_or_shift_analysis": true,
+    "analysis_stack_10": true,
+    "ai_uses_empirical": true,
+    "provenance_in_ai": true,
+    "workspaces_26_plus": true,
+    "workspace_contract_complete": true,
+    "workspace_method_uniqueness": true,
+    "workspace_action_specificity": true,
+    "live_empirical_endpoint_source": true,
+    "empirical_ui_live": true,
+    "claim_boundary": true
+  },
+  "workspaces": 33,
+  "data_mode": "offline_reference",
+  "promotion": "REFERENCE_ONLY",
+  "source": "Alternative Fuel Stations API",
+  "rows": 153,
+  "case": "Illinois corridor charging-capacity and N-1 resilience study"
+}

@@ -1,0 +1,15 @@
+{
+  "project": "VOLTERRA V1",
+  "release": "VOLTERRA_V1_ENTERPRISE_RC2",
+  "phase": "ENTERPRISE_OPERABILITY_AND_DECISION_ASSURANCE",
+  "result": "PASS",
+  "passed": 6,
+  "skipped": 0,
+  "failures": 0,
+  "errors": 0,
+  "scope": "Independent SciPy/HiGHS formulation-reference and assurance tests",
+  "junit_evidence": [
+    "docs/validation/junit/volterra.xml"
+  ],
+  "test_environment_boundary": "Container evidence is a pre-release gate. Target Windows enterprise acceptance remains mandatory."
+}

@@ -1,0 +1,30 @@
+{
+  "dataset": "DOE/NLR Alternative Fueling Station Locator / AFDC",
+  "field_policy": "Source-native fields are preserved in data/raw; canonical/derived fields must be documented before use.",
+  "derived_fields": [
+    {
+      "name": "source_mode",
+      "category": "DERIVED ANALYSIS",
+      "definition": "Whether required public raw observations are present and validated."
+    },
+    {
+      "name": "public_evidence_gate",
+      "category": "DERIVED ANALYSIS",
+      "definition": "Human-review gate driven by public-data readiness/calibration."
+    },
+    {
+      "name": "raw_sha256",
+      "category": "DERIVED ANALYSIS",
+      "definition": "SHA-256 of the immutable source snapshot."
+    }
+  ],
+  "claim_categories": [
+    "REAL OBSERVED DATA",
+    "DERIVED ANALYSIS",
+    "MODEL PREDICTION",
+    "SIMULATION RESULT",
+    "OPTIMIZATION RESULT",
+    "REFERENCE/SYNTHETIC TEST",
+    "ASSUMPTION"
+  ]
+}

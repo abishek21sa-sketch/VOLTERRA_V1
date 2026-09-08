@@ -1,0 +1,118 @@
+{
+  "certificate": {
+    "approval_authority": "INFRASTRUCTURE_PLANNING_COMMITTEE",
+    "candidate_site_count": 3,
+    "certificate_sha256": "3ab5b708b4271aa1d30eff17426cdb88336d0dc6627b6b6c0094ec5b23e7ce2d",
+    "certificate_type": "VOLTERRA_INFRASTRUCTURE_ASSURANCE_V1",
+    "checks": {
+      "critical_outage_coverage_complete": true,
+      "investment_execution_blocked": true,
+      "n_minus_one_plan_optimal": true,
+      "nominal_plan_optimal": true
+    },
+    "claim_boundary": "Synthetic/reference planning evidence only; not utility approval, permitting approval, or authorization to spend capital.",
+    "corridor_count": 3,
+    "critical_corridor_count": 2,
+    "decision_state": "INFRASTRUCTURE_INVESTMENT_REVIEW",
+    "generated_at_utc": "2026-09-05T02:40:00.943378+00:00",
+    "investment_execution_allowed": false,
+    "n_minus_one_plan": {
+      "assignments": {
+        "FREIGHT@P1": "GRID_C",
+        "FREIGHT@P2": "GRID_C",
+        "FREIGHT@P3": "CORRIDOR_B",
+        "I-CORE@P1": "URBAN_A",
+        "I-CORE@P2": "URBAN_A",
+        "I-CORE@P3": "URBAN_A",
+        "SUBURB@P1": "GRID_C",
+        "SUBURB@P2": "GRID_C",
+        "SUBURB@P3": "GRID_C"
+      },
+      "contingency_assignments": {
+        "FREIGHT@OUTAGE:CORRIDOR_B": "GRID_C",
+        "FREIGHT@OUTAGE:GRID_C": "CORRIDOR_B",
+        "FREIGHT@OUTAGE:URBAN_A": "GRID_C",
+        "I-CORE@OUTAGE:CORRIDOR_B": "URBAN_A",
+        "I-CORE@OUTAGE:GRID_C": "URBAN_A",
+        "I-CORE@OUTAGE:URBAN_A": "CORRIDOR_B"
+      },
+      "n_minus_one_critical": true,
+      "objective": 826691.3580246913,
+      "opened_period": {
+        "CORRIDOR_B": 3,
+        "GRID_C": 1,
+        "URBAN_A": 1
+      },
+      "stalls_by_period": {
+        "CORRIDOR_B": [
+          0,
+          0,
+          3
+        ],
+        "GRID_C": [
+          1,
+          2,
+          2
+        ],
+        "URBAN_A": [
+          1,
+          2,
+          3
+        ]
+      },
+      "status": "OPTIMAL"
+    },
+    "native_julia_gate": "PENDING_WINDOWS_JULIA_ACCEPTANCE",
+    "nominal_plan": {
+      "assignments": {
+        "FREIGHT@P1": "CORRIDOR_B",
+        "FREIGHT@P2": "CORRIDOR_B",
+        "FREIGHT@P3": "CORRIDOR_B",
+        "I-CORE@P1": "CORRIDOR_B",
+        "I-CORE@P2": "CORRIDOR_B",
+        "I-CORE@P3": "CORRIDOR_B"
+      },
+      "contingency_assignments": {},
+      "n_minus_one_critical": false,
+      "objective": 536203.0178326474,
+      "opened_period": {
+        "CORRIDOR_B": 1
+      },
+      "stalls_by_period": {
+        "CORRIDOR_B": [
+          2,
+          3,
+          4
+        ],
+        "GRID_C": [
+          0,
+          0,
+          0
+        ],
+        "URBAN_A": [
+          0,
+          0,
+          0
+        ]
+      },
+      "status": "OPTIMAL"
+    },
+    "planning_horizon_periods": 3,
+    "required_external_reviews": [
+      "UTILITY_INTERCONNECTION",
+      "SITE_PERMITTING",
+      "REAL_DEMAND_CALIBRATION",
+      "CAPEX_VALIDATION"
+    ],
+    "resilience_economic_flag": "HIGH_REDUNDANCY_PREMIUM",
+    "resilience_premium_ratio": 0.5417506625871086,
+    "resilience_premium_reference_usd": 290488.3401920439
+  },
+  "status": "PASS",
+  "verification": {
+    "decision_state": "INFRASTRUCTURE_INVESTMENT_REVIEW",
+    "expected_sha256": "3ab5b708b4271aa1d30eff17426cdb88336d0dc6627b6b6c0094ec5b23e7ce2d",
+    "stored_sha256": "3ab5b708b4271aa1d30eff17426cdb88336d0dc6627b6b6c0094ec5b23e7ce2d",
+    "valid": true
+  }
+}

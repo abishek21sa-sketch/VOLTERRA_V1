@@ -1,0 +1,8 @@
+{
+  "project": "VOLTERRA V1",
+  "ui_namespace": "geo-",
+  "signature_marker": "geospatial infrastructure planning studio",
+  "workspace_count": 33,
+  "max_allowed_pairwise_similarity": 0.2,
+  "product_identity": "map-first infrastructure planning studio"
+}

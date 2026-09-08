@@ -1,0 +1,9 @@
+data/raw
+data/snapshots
+**/node_modules
+**/.venv
+**/__pycache__
+**/dist
+**/.angular
+**/*.duckdb
+.git

@@ -1,0 +1,83 @@
+{
+  "project": "VOLTERRA V1",
+  "release_stage": "PORTFOLIO_PUBLIC_DATA_RELEASE_CANDIDATE",
+  "platform": "Windows-first",
+  "workspaces": 32,
+  "original_algorithm": "GRIDWEAVE-v1",
+  "predictive_ml_family": "Graph-regularized spatiotemporal demand learning",
+  "decision_campaign": "Resilient Network Capital Campaign",
+  "campaign_identity": "N-1 coverage margin + CAPEX/service frontier",
+  "data_mode": "offline_reference",
+  "empirical_promotion": "REFERENCE_ONLY",
+  "human_authority": "INFRASTRUCTURE_INVESTMENT_REVIEW",
+  "autonomous_execution": false,
+  "evidence_inventory": [
+    {
+      "path": "artifacts/tenx_validation.json",
+      "sha256": "0707c549a08523d43cf809dceca9f13846677bc37eaaf707bc5a4459dce01e9c"
+    },
+    {
+      "path": "artifacts/tenx_stress.json",
+      "sha256": "4e299880c80d155533e6aeade1a4619580e3db0e36541664152bb6aee133423f"
+    },
+    {
+      "path": "artifacts/airlines15x_validation.json",
+      "sha256": "125998fba85f67e49a9b0998cb02227b20c3e2a9fd33915f38b220ebdcc576cd"
+    },
+    {
+      "path": "artifacts/final_depth_validation.json",
+      "sha256": "48e3a349af659ba333aa9376365d0ef7e65fb9ad5f2ec8b1d78ac60861c2aeb9"
+    },
+    {
+      "path": "artifacts/intelligence_validation.json",
+      "sha256": "330d7197b0cb4546c9b377873bbb0f2607ddebcefcb653e914440309dafae0ac"
+    },
+    {
+      "path": "artifacts/ui_identity_validation.json",
+      "sha256": "03063cfd8b59ed9c0fc382e45b2e43704733110384293347b2c2247775b01f57"
+    },
+    {
+      "path": "artifacts/frontend_diversity.json",
+      "sha256": "700d77fc065fd1fbae0aeb2cf237dcf38f13485937f4b35a21713373b4440dac"
+    },
+    {
+      "path": "artifacts/governance_standard_validation.json",
+      "sha256": "d7ab7ffa0b785b319fec363d53c6938c4cfc579c5c25e313fbb6768b5f2b86c0"
+    },
+    {
+      "path": "PROJECT_METADATA.json",
+      "sha256": "dfb934b7e9777d8f18c6d9722c6498e4e1fd2541773aa45c75a7d686eda4143b"
+    },
+    {
+      "path": "docs/FRONTEND_DEMO_FLOW.md",
+      "sha256": "29d08dffdbf4beb86ab20126dc65c8ba24e49e07407150e449d23707fc61c9a6"
+    },
+    {
+      "path": "artifacts/fortune50_capability_benchmark.json",
+      "sha256": "03edd44be18d73f3c98900ece8f45d9704450db6949feb95ebc15f6ad775ddd0"
+    },
+    {
+      "path": "artifacts/enterprise_hardening.json",
+      "sha256": "3f7894447de9ea87170b400303d6c944527809006792543db468e5b4d0f4a762"
+    },
+    {
+      "path": "artifacts/frontend_demo_flow.json",
+      "sha256": "d0068c152a223e0b734e3ad1bd138573ef7c7b6134cc045b8cb2b805177d26fc"
+    },
+    {
+      "path": "backend/cmd/api/main.go",
+      "sha256": "418758dd939efbf652b494971213b3d6d311ff472098b78c58826814fc5ddf09"
+    }
+  ],
+  "claim_boundary": "Portfolio-grade analytical validation. External/domain validation and native dependency acceptance remain required where explicitly marked; autonomous operational execution is disabled.",
+  "product_ui_identity": "map-first infrastructure planning studio",
+  "ai_agent": "Network Investment Planner",
+  "agent_decision_policy": "forecast-gated resilient capital planning",
+  "ml_lifecycle_endpoint": "/api/ml/lifecycle",
+  "agent_endpoint": "/api/agent/run",
+  "frontend_similarity_method": "5-token Jaccard after removing embedded workspace contract payload",
+  "max_pairwise_frontend_similarity": 0.1321,
+  "frontend_similarity_threshold": 0.2,
+  "data_backbone": "structured public data contracts + provenance + claim ledger + project-specific empirical case",
+  "claim_ledger": "data/provenance/CLAIM_LEDGER.md"
+}

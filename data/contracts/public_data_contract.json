@@ -1,0 +1,27 @@
+{
+  "dataset": "DOE/NLR Alternative Fueling Station Locator / AFDC",
+  "case_study": "Illinois Charging Coverage and N-1 Expansion Study",
+  "raw_directory": "data/raw/afdc",
+  "required_primary_files": [
+    "afdc_il_ev_stations.json"
+  ],
+  "schema_policy": {
+    "numeric_missing_values": "allowed but must be profiled/imputed inside train-only pipeline",
+    "empty_file": "reject",
+    "hash": "SHA-256",
+    "source_mode": "explicit"
+  },
+  "decision_chain": [
+    "real observed data",
+    "derived diagnostics",
+    "predictive model",
+    "repository-authored original algorithm",
+    "OR/simulation escalation",
+    "analytical AI challenge",
+    "human approval/HOLD"
+  ],
+  "original_algorithm": "GRIDWEAVE-v1",
+  "claim_boundary": "AFDC station records are public infrastructure observations. Tesla company metrics are context; no internal charging-network data is claimed.",
+  "human_authority": "INFRASTRUCTURE_INVESTMENT_REVIEW",
+  "autonomous_execution": false
+}
