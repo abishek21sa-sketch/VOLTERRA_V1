@@ -1,0 +1,75 @@
+# Render Blueprint (https://render.com/docs/blueprint-spec) for VOLTERRA.
+#
+# Deploys the Go API as a native web service, and (optionally) the Angular frontend as a static
+# site. Nothing here has been deployed or credential-tested -- see README.md's "Deployment"
+# section for what actually works in this minimal configuration, what degrades, and the two data
+# artifacts you must produce yourself before /api/sites and /api/demand return real data.
+#
+# Not included on purpose: Memgraph and Redpanda (docker-compose.yml). Only one backend route
+# (POST /api/copilot's network_resilience tool) ever touches Memgraph, and only when an
+# ANTHROPIC_API_KEY or GEMINI_API_KEY is configured -- everything else this blueprint deploys
+# (/health, /api/sites, /api/demand, /api/governance/signature, /api/copilot's deterministic
+# fallback, /api/copilot/status) works with no graph database or event bus running at all. See
+# backend/cmd/api/main.go and backend/internal/graphdb for why: graphdb.NewClient connects
+# lazily, so its absence never blocks startup or any other route.
+
+services:
+  # --- Backend: Go + Fiber API (backend/cmd/api) ---
+  - type: web
+    name: volterra-backend
+    runtime: go
+    plan: free
+    rootDir: backend
+    # internal/warehouse shells out to the `duckdb` CLI (no CGO driver in use -- see that
+    # package's doc comment) so the build step fetches the same CLI version this project
+    # developed against (DuckDB CLI 1.5.5, per CLAUDE.md) as a portable Linux binary.
+    buildCommand: >-
+      curl -fsSL -o /tmp/duckdb_cli.zip
+      https://github.com/duckdb/duckdb/releases/download/v1.5.5/duckdb_cli-linux-amd64.zip &&
+      mkdir -p bin && unzip -o /tmp/duckdb_cli.zip -d bin && chmod +x bin/duckdb &&
+      go build -o bin/api ./cmd/api
+    startCommand: ./bin/api
+    healthCheckPath: /health
+    envVars:
+      # Render injects PORT itself for native web services; main.go already reads it (falls
+      # back to 8080 locally) -- do not set PORT here.
+      - key: VOLTERRA_DUCKDB_PATH
+        value: bin/duckdb
+      # NOT bundled by this blueprint -- see README.md's Deployment section. Until this path
+      # holds a real warehouse file, GET /api/sites returns a clear 500, not fake data.
+      - key: VOLTERRA_WAREHOUSE_PATH
+        value: ../warehouse/volterra.duckdb
+      # NOT bundled by this blueprint either -- same README section. Until this path holds the
+      # real predictions file, GET /api/demand returns a clear 500, not fake data.
+      - key: VOLTERRA_QUEUE_RISK_PREDICTIONS_PATH
+        value: ../ml/data/queue_risk_predictions.json
+      # Set this to your deployed frontend's real origin (Vercel or Render static site) once you
+      # have it -- CORS blocks everything else by default.
+      - key: VOLTERRA_CORS_ORIGIN
+        value: https://REPLACE-WITH-YOUR-FRONTEND-ORIGIN
+      # Optional. Leave unset to keep POST /api/copilot on its deterministic fallback (no
+      # external LLM call, no Memgraph dependency). Set only one of ANTHROPIC_API_KEY /
+      # GEMINI_API_KEY-or-GOOGLE_API_KEY; main.go prefers Gemini when present.
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      # Optional, and only relevant once one of the keys above is set. Without a real Memgraph
+      # instance reachable at this URI, the copilot's network_resilience tool call fails
+      # per-request (clear error) rather than crashing the service -- see README.md.
+      - key: VOLTERRA_MEMGRAPH_URI
+        sync: false
+
+  # --- Frontend: Angular + MapLibre GL static build (frontend/) ---
+  # Vercel is an equally valid (arguably simpler) home for this -- see vercel.json and README.md's
+  # Deployment section. Both are provided; use one, not both, to avoid two live CORS origins.
+  - type: web
+    name: volterra-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist/frontend/browser
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

@@ -1,32 +1,3 @@
-## AIRLINES-1.5× DEPTH CANDIDATE
-
-Current release `VOLTERRA_V1_FORTUNE50_AIRLINES15X_RC4` adds a live empirical/historical analysis layer, 26+ substantive workspaces, project-native domain diagnostics, external-source refresh/provenance, and AI decisions grounded in explicit evidence mode. See `docs/AIRLINES_15X_RELEASE.md`.
-
-# Fortune-50 TENX analytical release
-
-**Internal portfolio target:** Math 10/10 · UI 10/10 · AI 10/10, subject to the evidence boundaries below.
-
-- Repository-authored algorithm: **GRIDWEAVE-v1**
-- Unique predictive-learning family: **Graph-regularized spatiotemporal demand learning**
-- Analytical AI role: **AI Network Planner**
-- TENX workspaces: **20**
-- Operational authority: **human-gated; autonomous execution blocked**
-
-### Test the TENX layer on Windows
-
-```powershell
-Set-ExecutionPolicy -Scope Process Bypass
-.\scripts\windows_tenx_acceptance.ps1
-.\scripts\start_tenx_workstation.ps1
-```
-
-The first command validates prediction → decision → counterfactual → OR escalation → user-aid behavior and a five-seed originality stress suite. The second opens the dedicated analytical workstation.
-
-> **Evidence boundary:** TENX bundled metrics are synthetic/reference validation, not field deployment validation. Existing native Windows, Julia/Go/Rust/frontend, external-data, clinical, or production gates remain applicable where documented.
-
----
-
-
 ## Portfolio RC1 — Greenfield network expansion
 
 VOLTERRA now includes a multi-period greenfield charging-network expansion MILP in `optimization/src/network_expansion.jl`. The formulation jointly decides site-opening period, stall additions, corridor assignment, annual capital budgets, grid-interconnection limits, service capacity, demand-weighted uncovered demand, and mandatory horizon coverage for critical corridors. A SciPy/HiGHS reference formulation in `validation/` independently checks key invariants when Julia is unavailable. Native Julia/JuMP execution remains a required release gate.
@@ -224,22 +195,66 @@ Each module directory has its own README with its own toolchain instructions onc
 lands there. Cross-cutting local orchestration (Memgraph, Redpanda, the Go API, the warehouse
 volume) is defined in [`docker-compose.yml`](docker-compose.yml).
 
+## Deployment
+
+Not yet deployed anywhere — this section documents what a real deploy needs and, honestly, what
+it doesn't get you yet. [`render.yaml`](render.yaml) is a Render Blueprint for the backend (and
+optionally the frontend); [`frontend/vercel.json`](frontend/vercel.json) is the alternative
+frontend path on Vercel. Neither has been exercised against a real Render/Vercel account — no
+credentials for either were available while writing this.
+
+**What the backend actually needs at request time.** Reading `backend/cmd/api/main.go`:
+`graphdb.NewClient` connects to Memgraph lazily, so its absence never blocks startup or any route
+that doesn't use it. That means `GET /health`, `GET /api/sites`, `GET /api/demand`, and
+`GET /api/governance/signature` need only the DuckDB warehouse file and the Go binary — no
+Memgraph, no Redpanda. `POST /api/copilot` degrades gracefully too: with no `ANTHROPIC_API_KEY` or
+`GEMINI_API_KEY`/`GOOGLE_API_KEY` configured it answers from `copilot.DeterministicAnswer` and
+never touches Memgraph at all; only once a key is set can the model choose the
+`network_resilience` tool, which does need a real, reachable Memgraph — without one, that specific
+tool call fails with a clear error on that one request rather than crashing the service. Redpanda
+is unused by any Go code today (`docker-compose.yml`'s own comment says the same) so it is never a
+deploy blocker. **Net: a minimal deploy of just the Go API against the DuckDB warehouse is real
+and honest — Memgraph/Redpanda are not required for the backend to serve traffic**, only for one
+tool call inside one endpoint to reach its full capability.
+
+**The real gap: two data artifacts aren't in this repo.** `warehouse/volterra.duckdb`
+(`warehouse/README.md`) and `ml/data/queue_risk_predictions.json` (`backend/README.md`) are both
+gitignored by design — regenerable build outputs, not source. Regenerating them requires
+`data/snapshots/*.json`, which are *also* gitignored, and populating those requires live API keys
+for NREL/NLR, EIA, and OpenEI (see `docs/data-sources.md`) that this blueprint has no way to hold
+on your behalf. `render.yaml`'s build step does **not** attempt any of this. Concretely: deploying
+`render.yaml` as-is will boot successfully and `/health` will return `200`, but `/api/sites` and
+`/api/demand` will return a `500` (a real, honest error — not fabricated data) until you build
+those two files yourself (locally, or in your own CI with those keys) and get them onto the
+deployed instance — e.g. a Render persistent disk, or committing them to a private deploy branch.
+This is a real limitation of the current repo, not something this pass could close without
+credentials it doesn't have.
+
+**Frontend.** The Angular build is a static SPA (`ng build`, output
+`frontend/dist/frontend/browser`) with no server-side requirement, so either Vercel
+(`frontend/vercel.json`) or a Render static site (the second service in `render.yaml`) works —
+pick one, not both, so there's a single CORS origin to allow on the backend. One real blocker
+before either deploy is useful: `frontend/src/app/core/network-api.ts` hardcodes
+`API_BASE_URL = 'http://localhost:8090'` — this project's own `docs/frontend-notes.md` (item 2)
+already flags it: "Still not wired to a build-time env var; do that before any real deployment."
+That fix is frontend code, not a deploy-config change, so it's out of scope here — a deployed
+frontend will build and load but will try to call `localhost` from the browser and fail until that
+env-var wiring lands.
+
+**Deploy order**, once the two gaps above are closed:
+1. Deploy the backend (Render Blueprint) first and note its public URL.
+2. Set `VOLTERRA_CORS_ORIGIN` on the backend to the frontend's eventual origin (you'll know it in
+   advance for Vercel/Render's default subdomain, or update it once after the frontend's first
+   deploy).
+3. Point the frontend's API base URL at the backend's public URL (post-fix per above) and deploy
+   the frontend (Vercel or Render static site).
+
 ## License / attribution
 
 All third-party data (Tesla, NREL, FHWA, Census, EIA, NOAA, EPA) is used under its respective
 public-data terms; see `data/README.md` for per-source attribution and terms links. This is an
 independent analytics project and is not affiliated with, endorsed by, or sponsored by Tesla,
 Inc.
-
-## Enterprise operability gate
-
-This source release includes a governed decision-assurance layer, negative-path operability tests, hash-verifiable evidence, and a Windows enterprise acceptance gate. See `docs/ENTERPRISE_OPERABILITY.md`.
-
-```powershell
-Set-ExecutionPolicy -Scope Process Bypass
-.\\validation\\windows_enterprise_acceptance.ps1
-```
-
 
 ## Public Data Backbone
 This release contains a structured public-data layer under `data/raw`, `data/processed`, `data/contracts`, `data/dictionaries`, `data/provenance`, and `data/snapshots`. Run `scripts\fetch_public_data_windows.ps1` when the primary public dataset is not bundled, then run `scripts\windows_real_data_acceptance.ps1`. `artifacts/data_backbone_status.json` records source state, row/feature counts, missingness, SHA-256, validation status, case-study state, claim boundary, model version, and the human decision authority.

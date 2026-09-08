@@ -22,8 +22,14 @@
   "product_ui_identity": "map-first infrastructure planning studio",
   "ai_agent": "Network Investment Planner",
   "agent_decision_policy": "forecast-gated resilient capital planning",
-  "ml_lifecycle_endpoint": "/api/ml/lifecycle",
-  "agent_endpoint": "/api/agent/run",
+  "api_endpoints": {
+    "health": "GET /health",
+    "sites": "GET /api/sites",
+    "demand": "GET /api/demand",
+    "governance_signature": "GET /api/governance/signature",
+    "copilot": "POST /api/copilot",
+    "copilot_status": "GET /api/copilot/status"
+  },
   "frontend_similarity_target": "<20% pairwise structural similarity",
   "max_pairwise_frontend_similarity": 0.1321,
   "frontend_diversity_status": "PASS",
