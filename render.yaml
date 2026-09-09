@@ -69,6 +69,12 @@ services:
     rootDir: frontend
     buildCommand: npm ci && npm run build
     staticPublishPath: dist/frontend/browser
+    envVars:
+      # Render's default Node (24.14.1 as of this writing) is one patch behind what this
+      # Angular CLI version requires (>=24.15.0) and fails the build outright -- pin explicitly
+      # rather than float on Render's default and re-break on the next Node bump.
+      - key: NODE_VERSION
+        value: 24.15.0
     routes:
       - type: rewrite
         source: /*
