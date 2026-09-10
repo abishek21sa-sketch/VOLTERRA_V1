@@ -10,10 +10,16 @@ was deleted since there's deliberately no router-based navigation; see item 3 be
 1. `maplibre-gl` installed; its CSS wired through `angular.json`'s `styles` array (a Sass `@use`
    of the node_modules CSS was tried first and dropped — the `angular.json` route is the reliable
    one for third-party CSS in this Angular CLI setup).
-2. `NetworkApi` (`src/app/core/network-api.ts`) hardcodes `API_BASE_URL` — currently
-   `http://localhost:8090`, not `docker-compose.yml`'s 8080, because this dev machine already has
-   another project's backend on 8080 (see `backend/README.md`). Still not wired to a build-time
-   env var; do that before any real deployment.
+2. `NetworkApi` (`src/app/core/network-api.ts`) reads `API_BASE_URL` from
+   `window.__VOLTERRA_API_BASE__`, set by an inline script in `index.html`: the real deployed
+   Render origin for any non-localhost hostname, `http://localhost:8090` for local dev (not
+   `docker-compose.yml`'s 8080, because this dev machine already has another project's backend on
+   8080, see `backend/README.md`). `network-map.ts`'s `API_HINT` reads the same bridge. Resolved
+   now that real deployment config exists — this was previously hardcoded to localhost, which
+   silently broke the deployed site (confirmed live: every `/api/*` call from the actual compiled
+   Vercel bundle was going to `localhost:8090` and failing with `net::ERR_BLOCKED_BY_CLIENT`, even
+   though direct `fetch()` calls against the real Render origin — used for the "verified
+   end-to-end" note below — worked fine and masked the bug).
 4. Site dossier: `network-map/network-map.html`'s `<aside class="dossier">`, a slide-over panel
    (not a modal) triggered by clicking a marker. Shows name, city/state, stalls, power, operator,
    access.

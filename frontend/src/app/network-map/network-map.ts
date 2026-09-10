@@ -13,8 +13,9 @@ const BASEMAP_STYLE_URL = 'https://tiles.openfreemap.org/styles/liberty';
 const US_CENTER: [number, number] = [-98.5, 39.5];
 const US_INITIAL_ZOOM = 3.6;
 
-// Matches NetworkApi's API_BASE_URL — surfaced here only for the connection-error message.
-const API_HINT = 'http://localhost:8090';
+// Matches NetworkApi's API_BASE_URL (same index.html-set window bridge) — used directly for the
+// copilot fetch call and surfaced in the connection-error message.
+const API_HINT = (window as any).__VOLTERRA_API_BASE__ ?? 'http://localhost:8090';
 
 const DEFAULT_UTILIZATION_INDEX = 5; // UTILIZATION_GRID[5] === 0.75
 
