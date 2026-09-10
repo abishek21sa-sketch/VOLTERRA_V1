@@ -5,8 +5,11 @@
 # "Deployment" section for details. /api/sites returns real NREL AFDC charging stations (Tesla's
 # own site collection is blocked from cloud/datacenter IP ranges by Akamai bot detection -- a
 # documented, disclosed, environment-specific limitation, not a code bug; see
-# backend/internal/warehouse/warehouse.go). /api/demand still needs
-# ml/data/queue_risk_predictions.json, which is not yet produced from real data.
+# backend/internal/warehouse/warehouse.go). /api/demand serves real queue-risk predictions for 20
+# real NREL AFDC sites (many of them Tesla Superchargers under NREL's own registry) with real
+# live NOAA current-forecast temperatures fetched per site; see ml/data/queue_risk_predictions.json
+# and ml/examples/predict_real_sites_grid.py's module doc comment for exactly what's real there
+# vs. the one disclosed assumed value (per-stall power rating, which NREL's feed doesn't publish).
 #
 # Not included on purpose: Memgraph and Redpanda (docker-compose.yml). Only one backend route
 # (POST /api/copilot's network_resilience tool) ever touches Memgraph, and only when an
@@ -44,8 +47,9 @@ services:
       # warehouse/build_warehouse.py and README.md's Deployment section for how to refresh it.
       - key: VOLTERRA_WAREHOUSE_PATH
         value: ../warehouse/volterra.duckdb
-      # NOT bundled by this blueprint either -- same README section. Until this path holds the
-      # real predictions file, GET /api/demand returns a clear 500, not fake data.
+      # ml/data/queue_risk_predictions.json is committed directly (small, tens of KB -- same
+      # reasoning as the warehouse above) with real NREL AFDC site data and real live NOAA temps.
+      # See ml/examples/predict_real_sites_grid.py to regenerate it.
       - key: VOLTERRA_QUEUE_RISK_PREDICTIONS_PATH
         value: ../ml/data/queue_risk_predictions.json
       # Set this to your deployed frontend's real origin (Vercel or Render static site) once you

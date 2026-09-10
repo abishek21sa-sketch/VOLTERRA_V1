@@ -44,7 +44,7 @@ type SitePredictions struct {
 }
 
 // Load reads and parses the predictions file. Re-read per request, not cached in memory — same
-// pattern as internal/warehouse.QuerySites, and the file is small (tens of KB, 17 real sites).
+// pattern as internal/warehouse.QuerySites, and the file is small (tens of KB, 20 real sites).
 func Load(path string) ([]SitePredictions, error) {
 	data, err := os.ReadFile(path)
 	if err != nil {

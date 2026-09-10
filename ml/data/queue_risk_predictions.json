@@ -1,0 +1,1662 @@
+[
+  {
+    "site_id": "101999",
+    "name": "Baker, CA - Tesla Supercharger",
+    "city": "Baker",
+    "state": "CA",
+    "stall_count": 96,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 42.22,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.0,
+        "mean_queue_length": 0.0,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.0001173297208428285,
+        "mean_queue_length": 0.0,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.0008971650214922837,
+        "mean_queue_length": 0.00023408417034369896,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.006382172285625429,
+        "mean_queue_length": 0.003734523987656525,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.013401105899114954,
+        "p_wait": 0.02212350090214894,
+        "mean_queue_length": 0.032488375722022816,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.08723685391632557,
+        "p_wait": 0.056507831480733774,
+        "mean_queue_length": 0.10293608788881575,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 0.15058058408780464,
+        "p_wait": 0.12171772508923814,
+        "mean_queue_length": 0.25377691751737125,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 0.37691642390276725,
+        "p_wait": 0.23722322430934129,
+        "mean_queue_length": 0.7280755141389812,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 1.0383809585366386,
+        "p_wait": 0.4173188940591714,
+        "mean_queue_length": 2.0623270627190355,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 3.5128567575698253,
+        "p_wait": 0.6597740655732764,
+        "mean_queue_length": 6.904738640465348,
+        "p_wait_over_15min": 0.03175237441298608
+      }
+    ]
+  },
+  {
+    "site_id": "63068",
+    "name": "City of Pasadena - Marengo Garage",
+    "city": "Pasadena",
+    "state": "CA",
+    "stall_count": 40,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 38.33,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.0,
+        "mean_queue_length": 0.0,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.00017947914166523067,
+        "mean_queue_length": 0.00016838104482533658,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.0009593144423146857,
+        "mean_queue_length": 0.0008943879028768863,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.006444114707537833,
+        "mean_queue_length": 0.00439482772018971,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.013401105899114954,
+        "p_wait": 0.02209278838717409,
+        "mean_queue_length": 0.033148679454556004,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.08723685391632557,
+        "p_wait": 0.056477767408908655,
+        "mean_queue_length": 0.10359639162134894,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 0.15058058408780464,
+        "p_wait": 0.12127018079731135,
+        "mean_queue_length": 0.2547832678060122,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 0.37691642390276725,
+        "p_wait": 0.23759989761946776,
+        "mean_queue_length": 0.7303387681140999,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 1.0383809585366386,
+        "p_wait": 0.4187163678787575,
+        "mean_queue_length": 2.0674610694316344,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 3.5128567575698253,
+        "p_wait": 0.6611146171938439,
+        "mean_queue_length": 6.904738640465348,
+        "p_wait_over_15min": 0.03179647483430015
+      }
+    ]
+  },
+  {
+    "site_id": "102022",
+    "name": "Folsom, CA - Palladio Parkway - Tesla Supercharger",
+    "city": "Folsom",
+    "state": "CA",
+    "stall_count": 30,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 37.22,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.00018933784277540226,
+        "mean_queue_length": 0.0014582836222360683,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.0017222468789382123,
+        "mean_queue_length": 0.002585887733466504,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.004018269402489288,
+        "p_wait": 0.006036958501210983,
+        "mean_queue_length": 0.005908093854906708,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.015046242397879024,
+        "p_wait": 0.01888031104459543,
+        "mean_queue_length": 0.01924028071233646,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.04231551366521227,
+        "p_wait": 0.04613351596033754,
+        "mean_queue_length": 0.060269454246837745,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.1161512616824228,
+        "p_wait": 0.09195453981542474,
+        "mean_queue_length": 0.1507558490385433,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 0.2221711577490789,
+        "p_wait": 0.1748386861327668,
+        "mean_queue_length": 0.38106679607957683,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 0.5500670229239839,
+        "p_wait": 0.2950925745627582,
+        "mean_queue_length": 0.9255800271576721,
+        "p_wait_over_15min": 0.0004068946469895067
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 1.3794369095299708,
+        "p_wait": 0.4805640760376807,
+        "mean_queue_length": 2.3832867818245513,
+        "p_wait_over_15min": 0.005004474934847022
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 3.791359793256721,
+        "p_wait": 0.685368602882027,
+        "mean_queue_length": 7.010366804874387,
+        "p_wait_over_15min": 0.04845974489881535
+      }
+    ]
+  },
+  {
+    "site_id": "102017",
+    "name": "El Centro, CA - Tesla Supercharger",
+    "city": "El Centro",
+    "state": "CA",
+    "stall_count": 24,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 43.89,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.0011029379779943778,
+        "mean_queue_length": 0.002429537341347213,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.003254782287680292,
+        "p_wait": 0.005915171649974991,
+        "mean_queue_length": 0.0056810818987268535,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.015170334001815467,
+        "p_wait": 0.01346634682756173,
+        "mean_queue_length": 0.009003288020167062,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.053557401261624414,
+        "p_wait": 0.031798458287002854,
+        "mean_queue_length": 0.027588611566694198,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.08082667252895763,
+        "p_wait": 0.06920177763188862,
+        "mean_queue_length": 0.0844307264643384,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.20141183996755202,
+        "p_wait": 0.12362504293349787,
+        "mean_queue_length": 0.208108402468996,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 0.39211974326637483,
+        "p_wait": 0.214732901677064,
+        "mean_queue_length": 0.4560214819660762,
+        "p_wait_over_15min": 1.8552470778491706e-05
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 0.7721137170723276,
+        "p_wait": 0.34817219847099756,
+        "mean_queue_length": 1.077508095583938,
+        "p_wait_over_15min": 0.0011523600973073684
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 2.484065590674262,
+        "p_wait": 0.522706370467855,
+        "mean_queue_length": 2.632947673629703,
+        "p_wait_over_15min": 0.018451113936577442
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 5.578937136504214,
+        "p_wait": 0.7236585936798742,
+        "mean_queue_length": 7.533143652183236,
+        "p_wait_over_15min": 0.0952315342394812
+      }
+    ]
+  },
+  {
+    "site_id": "102002",
+    "name": "Buellton, CA - McMurray Road - Tesla Supercharger",
+    "city": "Buellton",
+    "state": "CA",
+    "stall_count": 20,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 36.11,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.002437393300856047,
+        "mean_queue_length": 0.002903454469422313,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.004472586445676378,
+        "p_wait": 0.009680552686018492,
+        "mean_queue_length": 0.00825786927752962,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.023008203374469124,
+        "p_wait": 0.025523602514498818,
+        "mean_queue_length": 0.021573712749966282,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.061395270634278035,
+        "p_wait": 0.04888794589610884,
+        "mean_queue_length": 0.048007214061868954,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.13437417673956456,
+        "p_wait": 0.08610338764983831,
+        "mean_queue_length": 0.11003457076922445,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.25495934417815913,
+        "p_wait": 0.16226790694824117,
+        "mean_queue_length": 0.28127801574780337,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 0.4391983674587071,
+        "p_wait": 0.2556966932263036,
+        "mean_queue_length": 0.5561111454962683,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 1.1615392841712457,
+        "p_wait": 0.3852723919060023,
+        "mean_queue_length": 1.209536297430224,
+        "p_wait_over_15min": 0.0027630234957063786
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 2.7086112414460426,
+        "p_wait": 0.5574555905559528,
+        "mean_queue_length": 2.7441560265466327,
+        "p_wait_over_15min": 0.02701331208362996
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 6.652030881081166,
+        "p_wait": 0.7475945543277442,
+        "mean_queue_length": 7.745848602662299,
+        "p_wait_over_15min": 0.13031206536905401
+      }
+    ]
+  },
+  {
+    "site_id": "102004",
+    "name": "Burbank, CA - N Third St - Tesla Supercharger",
+    "city": "Burbank",
+    "state": "CA",
+    "stall_count": 20,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 38.33,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.002347452426964102,
+        "mean_queue_length": 0.0028879325322279403,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.006839954660744167,
+        "p_wait": 0.009590611812126549,
+        "mean_queue_length": 0.008242347340335247,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.02537557158953691,
+        "p_wait": 0.025433661640606873,
+        "mean_queue_length": 0.02155819081277191,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.06376263884934583,
+        "p_wait": 0.0487980050222169,
+        "mean_queue_length": 0.047991692124674586,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.13674154495463234,
+        "p_wait": 0.08601344677594637,
+        "mean_queue_length": 0.11001904883203008,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.25732671239322696,
+        "p_wait": 0.16217796607434923,
+        "mean_queue_length": 0.281262493810609,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 0.44156573567377494,
+        "p_wait": 0.2556806578080267,
+        "mean_queue_length": 0.5560956235590738,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 1.1639066523863135,
+        "p_wait": 0.3852563564877254,
+        "mean_queue_length": 1.2107776791795075,
+        "p_wait_over_15min": 0.0030598991482152964
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 2.7474840240429206,
+        "p_wait": 0.558677285812393,
+        "mean_queue_length": 2.746867559252744,
+        "p_wait_over_15min": 0.02731479049580757
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 6.652030881081166,
+        "p_wait": 0.7484345486551963,
+        "mean_queue_length": 7.752305140491927,
+        "p_wait_over_15min": 0.13011951833911953
+      }
+    ]
+  },
+  {
+    "site_id": "102008",
+    "name": "Concord, CA - Tesla Supercharger",
+    "city": "Concord",
+    "state": "CA",
+    "stall_count": 19,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 36.67,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.00504920325512426,
+        "mean_queue_length": 0.00220984496239316,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.0033585018306939505,
+        "p_wait": 0.012790106866584253,
+        "mean_queue_length": 0.008980228220613529,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.02626683937898754,
+        "p_wait": 0.02863315669506458,
+        "mean_queue_length": 0.028468932010610046,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.06465390663879646,
+        "p_wait": 0.051876762913841634,
+        "mean_queue_length": 0.054902433322512725,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.13763281274408298,
+        "p_wait": 0.10137772349257437,
+        "mean_queue_length": 0.11811502958826325,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.34961126486556815,
+        "p_wait": 0.1682923589924137,
+        "mean_queue_length": 0.2893584745668421,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 0.5916753256515155,
+        "p_wait": 0.26892439181252487,
+        "mean_queue_length": 0.5827364320220972,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 1.2203908751530752,
+        "p_wait": 0.4001249929952417,
+        "mean_queue_length": 1.23684415010234,
+        "p_wait_over_15min": 0.0028296827119978505
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 2.7209641479940463,
+        "p_wait": 0.5677713153339782,
+        "mean_queue_length": 2.7713366278522225,
+        "p_wait_over_15min": 0.03086436157011151
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 6.518977284123253,
+        "p_wait": 0.7506364779594386,
+        "mean_queue_length": 7.810160871532116,
+        "p_wait_over_15min": 0.14662980923150803
+      }
+    ]
+  },
+  {
+    "site_id": "102007",
+    "name": "Harris Ranch, CA - Tesla Supercharger",
+    "city": "Coalinga",
+    "state": "CA",
+    "stall_count": 18,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 39.44,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.006627614730219447,
+        "mean_queue_length": 0.003091741339648514,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.00683763382410013,
+        "p_wait": 0.014433897264270627,
+        "mean_queue_length": 0.010174709564138434,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.03046742724163187,
+        "p_wait": 0.030276947092750958,
+        "mean_queue_length": 0.02966341335413495,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.06885449450144081,
+        "p_wait": 0.06000887207263028,
+        "mean_queue_length": 0.06401552978707453,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.1547995333637437,
+        "p_wait": 0.1114689097029457,
+        "mean_queue_length": 0.12897830332887003,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.48581626348477136,
+        "p_wait": 0.18087857227299795,
+        "mean_queue_length": 0.30181510595163286,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 0.727880324270719,
+        "p_wait": 0.27918915541890094,
+        "mean_queue_length": 0.588734310448695,
+        "p_wait_over_15min": 0.0001087461207032584
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 1.29593121473375,
+        "p_wait": 0.4070790068698994,
+        "mean_queue_length": 1.2498795268113823,
+        "p_wait_over_15min": 0.0035411005014005293
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 2.9217141554744868,
+        "p_wait": 0.5789325142038505,
+        "mean_queue_length": 2.875979860855258,
+        "p_wait_over_15min": 0.035590639894233764
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 7.673693558966661,
+        "p_wait": 0.7650616719686226,
+        "mean_queue_length": 7.856664999432044,
+        "p_wait_over_15min": 0.15136585374006048
+      }
+    ]
+  },
+  {
+    "site_id": "102001",
+    "name": "Barstow, CA - Tesla Supercharger",
+    "city": "Barstow",
+    "state": "CA",
+    "stall_count": 16,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 38.89,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.013126551570737636,
+        "mean_queue_length": 0.01035115344040164,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.018706356355635386,
+        "p_wait": 0.021123541165524215,
+        "mean_queue_length": 0.0168658485189333,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.042336149773167166,
+        "p_wait": 0.04414294713407063,
+        "mean_queue_length": 0.03635455230892974,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.08072321703297604,
+        "p_wait": 0.07652687070736565,
+        "mean_queue_length": 0.08813234596493777,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.22191731839256443,
+        "p_wait": 0.12959060466842492,
+        "mean_queue_length": 0.1660565867887914,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.5529340485135912,
+        "p_wait": 0.2072369721484789,
+        "mean_queue_length": 0.3568982121646497,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 0.8274403095688364,
+        "p_wait": 0.3127617086803501,
+        "mean_queue_length": 0.6410575528106922,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 1.5060682633023326,
+        "p_wait": 0.43304451000516075,
+        "mean_queue_length": 1.327584553871399,
+        "p_wait_over_15min": 0.013688502885172144
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 3.576642012000386,
+        "p_wait": 0.5948162999289962,
+        "mean_queue_length": 2.9560168796580384,
+        "p_wait_over_15min": 0.045829185510285995
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 8.272798804557727,
+        "p_wait": 0.7750867098971178,
+        "mean_queue_length": 7.967197621889693,
+        "p_wait_over_15min": 0.19176450302466577
+      }
+    ]
+  },
+  {
+    "site_id": "102006",
+    "name": "Cabazon, CA - Tesla Supercharger",
+    "city": "Cabazon",
+    "state": "CA",
+    "stall_count": 16,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 39.44,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.01311672838087821,
+        "mean_queue_length": 0.01035115344040164,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.018706356355635386,
+        "p_wait": 0.02111371797566479,
+        "mean_queue_length": 0.0168658485189333,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.042336149773167166,
+        "p_wait": 0.0441331239442112,
+        "mean_queue_length": 0.03635455230892974,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.08072321703297604,
+        "p_wait": 0.07651704751750622,
+        "mean_queue_length": 0.08813234596493777,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.22191731839256443,
+        "p_wait": 0.1295807814785655,
+        "mean_queue_length": 0.1660565867887914,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.5529340485135912,
+        "p_wait": 0.20722714895861946,
+        "mean_queue_length": 0.3568982121646497,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 0.8274403095688364,
+        "p_wait": 0.31222127737313154,
+        "mean_queue_length": 0.6410575528106922,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 1.5060682633023326,
+        "p_wait": 0.433104812274216,
+        "mean_queue_length": 1.327584553871399,
+        "p_wait_over_15min": 0.013688502885172144
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 3.576642012000386,
+        "p_wait": 0.5947729738930713,
+        "mean_queue_length": 2.9560168796580384,
+        "p_wait_over_15min": 0.045829185510285995
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 8.272798804557727,
+        "p_wait": 0.7750372397135119,
+        "mean_queue_length": 7.967197621889693,
+        "p_wait_over_15min": 0.19176450302466577
+      }
+    ]
+  },
+  {
+    "site_id": "102011",
+    "name": "Culver City, CA - Tesla Supercharger",
+    "city": "Culver City",
+    "state": "CA",
+    "stall_count": 16,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 32.78,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.013199261447609256,
+        "mean_queue_length": 0.009491366039482814,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.01593175146858553,
+        "p_wait": 0.021196251042395836,
+        "mean_queue_length": 0.01600606111801447,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.039561544886117295,
+        "p_wait": 0.04421565701094226,
+        "mean_queue_length": 0.035494764908010915,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.07794861214592617,
+        "p_wait": 0.07659958058423726,
+        "mean_queue_length": 0.08727255856401894,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.21914271350551456,
+        "p_wait": 0.12945229705037117,
+        "mean_queue_length": 0.16519679938787257,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.5501594436265415,
+        "p_wait": 0.2069195958351399,
+        "mean_queue_length": 0.3560384247637308,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 0.8246657046817867,
+        "p_wait": 0.3121544427350549,
+        "mean_queue_length": 0.6433256114094926,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 1.5090221598628448,
+        "p_wait": 0.43277844340827487,
+        "mean_queue_length": 1.3298526124701993,
+        "p_wait_over_15min": 0.013800112930814162
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 3.5961604242225977,
+        "p_wait": 0.5927261615045424,
+        "mean_queue_length": 2.9615452638806334,
+        "p_wait_over_15min": 0.047097266413396635
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 8.272798804557727,
+        "p_wait": 0.7734042810286196,
+        "mean_queue_length": 7.960741084060065,
+        "p_wait_over_15min": 0.1920404239056412
+      }
+    ]
+  },
+  {
+    "site_id": "102023",
+    "name": "Fountain Valley, CA - Tesla Supercharger",
+    "city": "Fountain Valley",
+    "state": "CA",
+    "stall_count": 16,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 33.33,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.013163352222152636,
+        "mean_queue_length": 0.009491366039482814,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.01593175146858553,
+        "p_wait": 0.021160341816939217,
+        "mean_queue_length": 0.01600606111801447,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.039561544886117295,
+        "p_wait": 0.04417974778548564,
+        "mean_queue_length": 0.035494764908010915,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.07794861214592617,
+        "p_wait": 0.07656367135878064,
+        "mean_queue_length": 0.08727255856401894,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.21914271350551456,
+        "p_wait": 0.12962740531983993,
+        "mean_queue_length": 0.16519679938787257,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.5501594436265415,
+        "p_wait": 0.20709470410460867,
+        "mean_queue_length": 0.3560384247637308,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 0.8246657046817867,
+        "p_wait": 0.31232955100452364,
+        "mean_queue_length": 0.6433256114094926,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 1.5090221598628448,
+        "p_wait": 0.43295355167774363,
+        "mean_queue_length": 1.3298526124701993,
+        "p_wait_over_15min": 0.013790414209682777
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 3.5961604242225977,
+        "p_wait": 0.5936675704658064,
+        "mean_queue_length": 2.9564207072264446,
+        "p_wait_over_15min": 0.04672030576375381
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 8.272798804557727,
+        "p_wait": 0.7735793892980883,
+        "mean_queue_length": 7.960741084060065,
+        "p_wait_over_15min": 0.19166346325599837
+      }
+    ]
+  },
+  {
+    "site_id": "1525",
+    "name": "LADWP - John Ferraro Building",
+    "city": "Los Angeles",
+    "state": "CA",
+    "stall_count": 15,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 35.56,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.014735012491202567,
+        "mean_queue_length": 0.008254354811237903,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.0234168756041979,
+        "p_wait": 0.024471721571542558,
+        "mean_queue_length": 0.02032541654852794,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.04718992114384907,
+        "p_wait": 0.05037756411938691,
+        "mean_queue_length": 0.042427180987646806,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.11337307908480324,
+        "p_wait": 0.08181983339889631,
+        "mean_queue_length": 0.09275895796368827,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.2545671804443916,
+        "p_wait": 0.1402632963594909,
+        "mean_queue_length": 0.17420708993358022,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.5855839105654186,
+        "p_wait": 0.22259134203816883,
+        "mean_queue_length": 0.36401355535937646,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 0.8964254640515081,
+        "p_wait": 0.3176332329020045,
+        "mean_queue_length": 0.6555378199160197,
+        "p_wait_over_15min": 0.001147718912631005
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 1.6515924562508475,
+        "p_wait": 0.4440204332293716,
+        "mean_queue_length": 1.3868805952775667,
+        "p_wait_over_15min": 0.016495293002071917
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 3.723901844753884,
+        "p_wait": 0.6028009314958487,
+        "mean_queue_length": 2.9836371166096454,
+        "p_wait_over_15min": 0.05308502225824928
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 9.143117039501526,
+        "p_wait": 0.7818398546175788,
+        "mean_queue_length": 7.9793738057623225,
+        "p_wait_over_15min": 0.1959735254402394
+      }
+    ]
+  },
+  {
+    "site_id": "102015",
+    "name": "Dublin, CA - Amador Plaza - Tesla Supercharger",
+    "city": "Dublin",
+    "state": "CA",
+    "stall_count": 14,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 33.33,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.01308664267193288,
+        "mean_queue_length": 0.008579502667995408,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.024531585330802377,
+        "p_wait": 0.028861772498475408,
+        "mean_queue_length": 0.02307332837283097,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.05227207379531221,
+        "p_wait": 0.05595190327022777,
+        "mean_queue_length": 0.04517509281194985,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.13063116737698816,
+        "p_wait": 0.09503248736949904,
+        "mean_queue_length": 0.09550686978799132,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.29191032340593354,
+        "p_wait": 0.15534220192087897,
+        "mean_queue_length": 0.20439549767785029,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.6229270535269602,
+        "p_wait": 0.2314965668714749,
+        "mean_queue_length": 0.3942019631036465,
+        "p_wait_over_15min": 0.0001825513636495614
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 0.9598341383595448,
+        "p_wait": 0.32581505225591567,
+        "mean_queue_length": 0.6756785961048706,
+        "p_wait_over_15min": 0.0014247235169711119
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 1.801901050385735,
+        "p_wait": 0.4607399827558835,
+        "mean_queue_length": 1.4457954767802226,
+        "p_wait_over_15min": 0.018077861272178072
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 4.154145471307072,
+        "p_wait": 0.6168779878829929,
+        "mean_queue_length": 3.0506819060742627,
+        "p_wait_over_15min": 0.067333409090754
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 7.8231031616407085,
+        "p_wait": 0.7902647216411892,
+        "mean_queue_length": 8.087255301601095,
+        "p_wait_over_15min": 0.22057763488679916
+      }
+    ]
+  },
+  {
+    "site_id": "63052",
+    "name": "LA County DHS 313 Fig",
+    "city": "Los Angeles",
+    "state": "CA",
+    "stall_count": 12,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 35.56,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.02338155508972486,
+        "mean_queue_length": 0.014457234772443418,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.06234135349908975,
+        "p_wait": 0.04163379462180302,
+        "mean_queue_length": 0.028951060477278988,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.09008184196359953,
+        "p_wait": 0.07215791179222862,
+        "mean_queue_length": 0.07159453034039163,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.19873644374846935,
+        "p_wait": 0.12072600565993025,
+        "mean_queue_length": 0.1386599852342997,
+        "p_wait_over_15min": 0.0001284068187969329
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.36048286392572043,
+        "p_wait": 0.18496714449514673,
+        "mean_queue_length": 0.23640074927460072,
+        "p_wait_over_15min": 0.0008661085375301479
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.8077960476093065,
+        "p_wait": 0.2679454634623445,
+        "mean_queue_length": 0.45163440312369546,
+        "p_wait_over_15min": 0.0024538081726902467
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 1.2432559996453294,
+        "p_wait": 0.3678459624451582,
+        "mean_queue_length": 0.8341835924617708,
+        "p_wait_over_15min": 0.006669889965419859
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 2.466497999805632,
+        "p_wait": 0.48606218433889803,
+        "mean_queue_length": 1.487793586613599,
+        "p_wait_over_15min": 0.02731565265939878
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 4.859440074006632,
+        "p_wait": 0.6484180676231486,
+        "mean_queue_length": 3.22963100889036,
+        "p_wait_over_15min": 0.0935716857311616
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 7.029540444636474,
+        "p_wait": 0.8015276215903141,
+        "mean_queue_length": 8.140595681481228,
+        "p_wait_over_15min": 0.24816080413540267
+      }
+    ]
+  },
+  {
+    "site_id": "101975",
+    "name": "Greenville, AL - Tesla Supercharger",
+    "city": "Greenville",
+    "state": "AL",
+    "stall_count": 12,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 33.89,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.02307710025857543,
+        "mean_queue_length": 0.014457234772443418,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.06193411682710768,
+        "p_wait": 0.04132933979065359,
+        "mean_queue_length": 0.028951060477278988,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.08967460529161747,
+        "p_wait": 0.07185345696107918,
+        "mean_queue_length": 0.07159453034039163,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.19832920707648727,
+        "p_wait": 0.12042155082878081,
+        "mean_queue_length": 0.1386599852342997,
+        "p_wait_over_15min": 0.0001284068187969329
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.3600756272537383,
+        "p_wait": 0.18455899964019487,
+        "mean_queue_length": 0.23640074927460072,
+        "p_wait_over_15min": 0.0008661085375301479
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.8073888109373244,
+        "p_wait": 0.2674066498855387,
+        "mean_queue_length": 0.45163440312369546,
+        "p_wait_over_15min": 0.0024538081726902467
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 1.2428487629733473,
+        "p_wait": 0.36709116469201125,
+        "mean_queue_length": 0.8343167269493895,
+        "p_wait_over_15min": 0.006669889965419859
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 2.471819264581212,
+        "p_wait": 0.48567184812497965,
+        "mean_queue_length": 1.487926721101218,
+        "p_wait_over_15min": 0.02731565265939878
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 4.895919220140193,
+        "p_wait": 0.6477123810288553,
+        "mean_queue_length": 3.2314958314329694,
+        "p_wait_over_15min": 0.09357381946313101
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 7.029540444636474,
+        "p_wait": 0.8011883407202707,
+        "mean_queue_length": 8.140595681481228,
+        "p_wait_over_15min": 0.24783849187025978
+      }
+    ]
+  },
+  {
+    "site_id": "101977",
+    "name": "Oxford, AL - Tesla Supercharger",
+    "city": "Oxford",
+    "state": "AL",
+    "stall_count": 12,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 34.44,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.02307710025857543,
+        "mean_queue_length": 0.014457234772443418,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.06193411682710768,
+        "p_wait": 0.04132933979065359,
+        "mean_queue_length": 0.028951060477278988,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.08967460529161747,
+        "p_wait": 0.07185345696107918,
+        "mean_queue_length": 0.07159453034039163,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.19832920707648727,
+        "p_wait": 0.12042155082878081,
+        "mean_queue_length": 0.1386599852342997,
+        "p_wait_over_15min": 0.0001284068187969329
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.3600756272537383,
+        "p_wait": 0.18455899964019487,
+        "mean_queue_length": 0.23640074927460072,
+        "p_wait_over_15min": 0.0008661085375301479
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.8073888109373244,
+        "p_wait": 0.2674066498855387,
+        "mean_queue_length": 0.45163440312369546,
+        "p_wait_over_15min": 0.0024538081726902467
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 1.2428487629733473,
+        "p_wait": 0.36709116469201125,
+        "mean_queue_length": 0.8343167269493895,
+        "p_wait_over_15min": 0.006669889965419859
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 2.471819264581212,
+        "p_wait": 0.48567184812497965,
+        "mean_queue_length": 1.487926721101218,
+        "p_wait_over_15min": 0.02731565265939878
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 4.895919220140193,
+        "p_wait": 0.6477123810288553,
+        "mean_queue_length": 3.2297641433779787,
+        "p_wait_over_15min": 0.0935716857311616
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 7.029540444636474,
+        "p_wait": 0.8011883407202707,
+        "mean_queue_length": 8.140595681481228,
+        "p_wait_over_15min": 0.24783635813829036
+      }
+    ]
+  },
+  {
+    "site_id": "102013",
+    "name": "Downey, CA - Stonewood Street - Tesla Supercharger",
+    "city": "Downey",
+    "state": "CA",
+    "stall_count": 12,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 37.22,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.023248091080115402,
+        "mean_queue_length": 0.014457234772443418,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.06234135349908975,
+        "p_wait": 0.04150033061219356,
+        "mean_queue_length": 0.028951060477278988,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.09008184196359953,
+        "p_wait": 0.07202444778261917,
+        "mean_queue_length": 0.07159453034039163,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.19873644374846935,
+        "p_wait": 0.1205925416503208,
+        "mean_queue_length": 0.1386599852342997,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.36048286392572043,
+        "p_wait": 0.1847299904617348,
+        "mean_queue_length": 0.23640074927460072,
+        "p_wait_over_15min": 0.0006885940569860816
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.8077960476093065,
+        "p_wait": 0.2678873781242178,
+        "mean_queue_length": 0.45163440312369546,
+        "p_wait_over_15min": 0.0018688428505805885
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 1.2432559996453294,
+        "p_wait": 0.36778787710703154,
+        "mean_queue_length": 0.8341835924617708,
+        "p_wait_over_15min": 0.006084924643310201
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 2.466497999805632,
+        "p_wait": 0.48574519937487765,
+        "mean_queue_length": 1.487793586613599,
+        "p_wait_over_15min": 0.026730687337289123
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 4.858466563808346,
+        "p_wait": 0.6482746256123432,
+        "mean_queue_length": 3.22963100889036,
+        "p_wait_over_15min": 0.09219504245239547
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 7.029540444636474,
+        "p_wait": 0.8017629185204714,
+        "mean_queue_length": 8.140595681481228,
+        "p_wait_over_15min": 0.24775335329383708
+      }
+    ]
+  },
+  {
+    "site_id": "102014",
+    "name": "Downey, CA - Lakewood Boulevard - Tesla Supercharger",
+    "city": "Downey",
+    "state": "CA",
+    "stall_count": 12,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 37.22,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.023248091080115402,
+        "mean_queue_length": 0.014457234772443418,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.06234135349908975,
+        "p_wait": 0.04150033061219356,
+        "mean_queue_length": 0.028951060477278988,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.09008184196359953,
+        "p_wait": 0.07202444778261917,
+        "mean_queue_length": 0.07159453034039163,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.19873644374846935,
+        "p_wait": 0.1205925416503208,
+        "mean_queue_length": 0.1386599852342997,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.36048286392572043,
+        "p_wait": 0.1847299904617348,
+        "mean_queue_length": 0.23640074927460072,
+        "p_wait_over_15min": 0.0006885940569860816
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.8077960476093065,
+        "p_wait": 0.2678873781242178,
+        "mean_queue_length": 0.45163440312369546,
+        "p_wait_over_15min": 0.0018688428505805885
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 1.2432559996453294,
+        "p_wait": 0.36778787710703154,
+        "mean_queue_length": 0.8341835924617708,
+        "p_wait_over_15min": 0.006084924643310201
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 2.466497999805632,
+        "p_wait": 0.48574519937487765,
+        "mean_queue_length": 1.487793586613599,
+        "p_wait_over_15min": 0.026730687337289123
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 4.858466563808346,
+        "p_wait": 0.6482746256123432,
+        "mean_queue_length": 3.22963100889036,
+        "p_wait_over_15min": 0.09219504245239547
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 7.029540444636474,
+        "p_wait": 0.8017629185204714,
+        "mean_queue_length": 8.140595681481228,
+        "p_wait_over_15min": 0.24775335329383708
+      }
+    ]
+  },
+  {
+    "site_id": "102019",
+    "name": "Fairfield, CA - Travis Boulevard - Tesla Supercharger",
+    "city": "Fairfield",
+    "state": "CA",
+    "stall_count": 12,
+    "max_power_kw": 250.0,
+    "power_source": "assumed_250kw_v3_supercharger_no_real_per_stall_rating",
+    "temp_c": 35.0,
+    "temp_source": "noaa_nws",
+    "predictions": [
+      {
+        "utilization": 0.5,
+        "mean_wait_min": 0.0,
+        "p_wait": 0.023286296736132597,
+        "mean_queue_length": 0.014457234772443418,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.55,
+        "mean_wait_min": 0.06234135349908975,
+        "p_wait": 0.04153853626821075,
+        "mean_queue_length": 0.028951060477278988,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.6,
+        "mean_wait_min": 0.09008184196359953,
+        "p_wait": 0.07206265343863635,
+        "mean_queue_length": 0.07159453034039163,
+        "p_wait_over_15min": 0.0
+      },
+      {
+        "utilization": 0.65,
+        "mean_wait_min": 0.19873644374846935,
+        "p_wait": 0.12063074730633798,
+        "mean_queue_length": 0.1386599852342997,
+        "p_wait_over_15min": 0.0001284068187969329
+      },
+      {
+        "utilization": 0.7,
+        "mean_wait_min": 0.36048286392572043,
+        "p_wait": 0.18487188614155448,
+        "mean_queue_length": 0.23640074927460072,
+        "p_wait_over_15min": 0.0008661085375301479
+      },
+      {
+        "utilization": 0.75,
+        "mean_wait_min": 0.8077960476093065,
+        "p_wait": 0.2678502051087522,
+        "mean_queue_length": 0.45163440312369546,
+        "p_wait_over_15min": 0.0024538081726902467
+      },
+      {
+        "utilization": 0.8,
+        "mean_wait_min": 1.2432559996453294,
+        "p_wait": 0.36753471991522474,
+        "mean_queue_length": 0.8341835924617708,
+        "p_wait_over_15min": 0.006669889965419859
+      },
+      {
+        "utilization": 0.85,
+        "mean_wait_min": 2.466497999805632,
+        "p_wait": 0.48611540334819314,
+        "mean_queue_length": 1.487793586613599,
+        "p_wait_over_15min": 0.02731565265939878
+      },
+      {
+        "utilization": 0.9,
+        "mean_wait_min": 4.859440074006632,
+        "p_wait": 0.6481559362520689,
+        "mean_queue_length": 3.22963100889036,
+        "p_wait_over_15min": 0.0935716857311616
+      },
+      {
+        "utilization": 0.95,
+        "mean_wait_min": 7.029540444636474,
+        "p_wait": 0.8014977929282295,
+        "mean_queue_length": 8.140595681481228,
+        "p_wait_over_15min": 0.24783635813829036
+      }
+    ]
+  }
+]

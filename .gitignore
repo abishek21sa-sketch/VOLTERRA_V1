@@ -15,6 +15,12 @@ warehouse/*.duckdb.wal
 # simulation/examples/generate_queue_risk_dataset.jl + ml/examples/train_queue_risk_model.py
 ml/data/**
 !ml/data/.gitkeep
+# queue_risk_predictions.json is the exception: it's the only ml/ artifact backend/ actually
+# reads at runtime (see internal/mlpredictions), it's small (tens of KB, 17 real sites), and
+# Render's Go build step doesn't persist generated files into the runtime container -- same
+# reasoning as warehouse/volterra.duckdb above. Regenerate via
+# ml/examples/predict_real_sites_grid.py after refreshing the warehouse or retraining models.
+!ml/data/queue_risk_predictions.json
 
 # Python
 __pycache__/
