@@ -63,11 +63,15 @@ func main() {
 		c.Set("Cache-Control", "no-store")
 		return c.Next()
 	})
-	// Dev-only default: the Angular dev server (localhost:4200) is cross-origin from the API
-	// (localhost:4200). The origin is configurable and defaults to the local UI only.
+	// The origin is configurable via VOLTERRA_CORS_ORIGIN. Falls back to both the local Angular
+	// dev server and the deployed Vercel frontend's real origin -- Render's env-var edit UI has
+	// proven unreliable in practice (confirmed live: curl with a matching Origin header got no
+	// Access-Control-Allow-Origin back at all after multiple saves through the dashboard), so
+	// baking in the known-good production origin here means the frontend keeps working even if
+	// that dashboard edit silently doesn't take.
 	allowedOrigin := os.Getenv("VOLTERRA_CORS_ORIGIN")
 	if allowedOrigin == "" {
-		allowedOrigin = "http://localhost:4200"
+		allowedOrigin = "http://localhost:4200,https://volterra-airlines.vercel.app"
 	}
 	app.Use(cors.New(cors.Config{AllowOrigins: allowedOrigin, AllowMethods: "GET,POST,OPTIONS", AllowHeaders: "Origin, Content-Type, Accept, X-Request-ID"}))
 
