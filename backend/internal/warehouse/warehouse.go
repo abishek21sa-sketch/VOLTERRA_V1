@@ -37,9 +37,13 @@ type Site struct {
 // source data; Site.MaxPowerKW is a non-pointer float64 (matching the existing frontend
 // contract), so those rows report 0 rather than a guessed value -- the frontend should treat
 // max_power_kw == 0 as "not reported by this source", not "no charger present".
-const sitesQuery = `LOAD spatial;
+// Uses charging_site's plain latitude/longitude columns, not ST_Y(geom)/ST_X(geom) -- schema.sql
+// documents these as deliberately redundant with geom for exactly this reason: LOADing the
+// spatial extension crashes some clients in this environment, and Render's runtime container has
+// no cached copy of it either (confirmed live: "Extension spatial.duckdb_extension not found").
+const sitesQuery = `
 SELECT site_id, operator_id, name, city, state,
-       ST_Y(geom) AS latitude, ST_X(geom) AS longitude,
+       latitude, longitude,
        stall_count, max_power_kw, access_restricted
 FROM charging_site
 UNION ALL
