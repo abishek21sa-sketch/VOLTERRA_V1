@@ -5,6 +5,11 @@ data/snapshots/**
 !data/snapshots/.gitkeep
 warehouse/*.duckdb
 warehouse/*.duckdb.wal
+# volterra.duckdb is the exception: at ~18MB (well under GitHub's 100MB limit) it's small enough
+# to commit directly rather than needing AUTOMOTIVE_PRODUCT_V1's GitHub-Release-asset pattern
+# (that project's warehouse is 644MB). Rebuild and re-commit it after refreshing any snapshot --
+# see warehouse/build_warehouse.py.
+!warehouse/volterra.duckdb
 
 # ml/ generated training data and trained model artifacts — regenerable via
 # simulation/examples/generate_queue_risk_dataset.jl + ml/examples/train_queue_risk_model.py

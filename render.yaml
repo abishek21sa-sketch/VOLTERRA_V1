@@ -31,23 +31,19 @@ services:
       https://github.com/duckdb/duckdb/releases/download/v1.5.5/duckdb_cli-linux-amd64.zip &&
       mkdir -p bin && unzip -o /tmp/duckdb_cli.zip -d bin && chmod +x bin/duckdb &&
       go build -o bin/api ./cmd/api
-    startCommand: bash start.sh
+    startCommand: ./bin/api
     healthCheckPath: /health
     envVars:
       # Render injects PORT itself for native web services; main.go already reads it (falls
       # back to 8080 locally) -- do not set PORT here.
       - key: VOLTERRA_DUCKDB_PATH
         value: bin/duckdb
+      # warehouse/volterra.duckdb is committed directly (see .gitignore's comment on why --
+      # unlike AUTOMOTIVE_PRODUCT_V1's 644MB warehouse, this one is ~18MB, comfortably under
+      # GitHub's 100MB limit) built from real NREL AFDC / FHWA / EIA / EPA / NREL ATB data. See
+      # warehouse/build_warehouse.py and README.md's Deployment section for how to refresh it.
       - key: VOLTERRA_WAREHOUSE_PATH
         value: ../warehouse/volterra.duckdb
-      # GitHub Release asset URL for warehouse/volterra.duckdb, built from real NREL AFDC /
-      # FHWA / EIA / EPA / NREL ATB data (warehouse/*.duckdb is gitignored -- see
-      # warehouse/build_warehouse.py and README.md's Deployment section). start.sh downloads it
-      # at boot if VOLTERRA_WAREHOUSE_PATH doesn't already exist. Until this is set, GET
-      # /api/sites and /api/demand return a clear 500, not fake data -- same pattern as
-      # AUTOMOTIVE_PRODUCT_V1's WAREHOUSE_URL/backend/start.sh.
-      - key: VOLTERRA_WAREHOUSE_URL
-        sync: false
       # NOT bundled by this blueprint either -- same README section. Until this path holds the
       # real predictions file, GET /api/demand returns a clear 500, not fake data.
       - key: VOLTERRA_QUEUE_RISK_PREDICTIONS_PATH
