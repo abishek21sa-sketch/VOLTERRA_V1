@@ -63,17 +63,18 @@ func main() {
 		c.Set("Cache-Control", "no-store")
 		return c.Next()
 	})
-	// The origin is configurable via VOLTERRA_CORS_ORIGIN. Falls back to both the local Angular
-	// dev server and the deployed Vercel frontend's real origin -- Render's env-var edit UI has
-	// proven unreliable in practice (confirmed live: curl with a matching Origin header got no
-	// Access-Control-Allow-Origin back at all after multiple saves through the dashboard), so
-	// baking in the known-good production origin here means the frontend keeps working even if
-	// that dashboard edit silently doesn't take.
-	allowedOrigin := os.Getenv("VOLTERRA_CORS_ORIGIN")
-	if allowedOrigin == "" {
-		allowedOrigin = "http://localhost:4200,https://volterra-airlines.vercel.app"
+	// Always allow the local Angular dev server and the deployed Vercel frontend's real origin,
+	// then append whatever VOLTERRA_CORS_ORIGIN adds on top -- this is deliberately additive, not
+	// a full override. Render's env-var edit UI has proven unreliable in practice (confirmed
+	// live: curl with a matching Origin header still got no Access-Control-Allow-Origin back
+	// after multiple saves through the dashboard, meaning the var was silently holding some other
+	// value the whole time, not actually empty), so a single bad or stale value in that field
+	// can no longer take down the one origin that matters most.
+	allowedOrigins := "http://localhost:4200,https://volterra-airlines.vercel.app"
+	if extra := os.Getenv("VOLTERRA_CORS_ORIGIN"); extra != "" {
+		allowedOrigins += "," + extra
 	}
-	app.Use(cors.New(cors.Config{AllowOrigins: allowedOrigin, AllowMethods: "GET,POST,OPTIONS", AllowHeaders: "Origin, Content-Type, Accept, X-Request-ID"}))
+	app.Use(cors.New(cors.Config{AllowOrigins: allowedOrigins, AllowMethods: "GET,POST,OPTIONS", AllowHeaders: "Origin, Content-Type, Accept, X-Request-ID"}))
 
 	app.Get("/health", func(c *fiber.Ctx) error {
 		return c.JSON(fiber.Map{"status": "ok", "service": "volterra-api"})
