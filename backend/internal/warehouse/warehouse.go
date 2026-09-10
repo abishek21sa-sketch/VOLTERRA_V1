@@ -30,11 +30,27 @@ type Site struct {
 	AccessRestricted bool    `json:"access_restricted"`
 }
 
+// UNIONs charging_site (Tesla, populated only where Tesla's own site collection isn't blocked --
+// see README's Deployment section on the Akamai bot-detection limitation) with nrel_station
+// (NREL AFDC, real and not blocked) so the map still shows real charging sites even on a
+// deployment where Tesla's own snapshot is empty. nrel_station has no max_power_kw field in the
+// source data; Site.MaxPowerKW is a non-pointer float64 (matching the existing frontend
+// contract), so those rows report 0 rather than a guessed value -- the frontend should treat
+// max_power_kw == 0 as "not reported by this source", not "no charger present".
 const sitesQuery = `LOAD spatial;
 SELECT site_id, operator_id, name, city, state,
        ST_Y(geom) AS latitude, ST_X(geom) AS longitude,
        stall_count, max_power_kw, access_restricted
 FROM charging_site
+UNION ALL
+SELECT 'nrel-' || station_id AS site_id,
+       'nrel_afdc' AS operator_id,
+       station_name AS name, city, state,
+       latitude, longitude,
+       COALESCE(ev_dc_fast_num, 0) + COALESCE(ev_level1_evse_num, 0) + COALESCE(ev_level2_evse_num, 0) AS stall_count,
+       0.0 AS max_power_kw,
+       (access_code IS NOT NULL AND access_code != 'public') AS access_restricted
+FROM nrel_station
 ORDER BY name;`
 
 func duckdbExecutable() string {
