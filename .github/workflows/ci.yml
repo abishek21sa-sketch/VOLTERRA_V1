@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  go:
+    name: Go tests (backend/)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: backend/go.mod
+      # internal/warehouse and internal/copilot's tools shell out to the duckdb CLI (no CGO
+      # driver -- see that package's doc comment), same version pinned in render.yaml's
+      # buildCommand.
+      - name: Install DuckDB CLI
+        run: |
+          curl -fsSL -o /tmp/duckdb_cli.zip \
+            https://github.com/duckdb/duckdb/releases/download/v1.5.5/duckdb_cli-linux-amd64.zip
+          sudo unzip -o /tmp/duckdb_cli.zip -d /usr/local/bin
+          sudo chmod +x /usr/local/bin/duckdb
+      - name: go test ./...
+        working-directory: backend
+        run: go test ./...
+
+  ml:
+    name: Python tests (ml/)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        working-directory: ml
+        run: pip install -e ".[dev]"
+      - name: pytest
+        working-directory: ml
+        run: python -m pytest tests/ -q
